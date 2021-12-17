@@ -32,4 +32,10 @@ height: 300px;
 
 The px is the basic unit of the css and it can is the fix in size it does not change as the ratio of the screen hence many developer do not use the **PX** unit. But it does not mean that we have to drop out this topic. This is the most important thing you have to know at the beginning of you _Web Development Practice_ because it's the unit only if you get this topic you can move furthur.
 
-#### Px Stand for Pixels
+**Px Stand for Pixels**
+
+> ## Fluctuating Units
+
+Hence the _Fluctuating_ word refers to the changing in the size or lenght of a html or documnent elements and this is only with the **Vw and Vh**. There is way where we we can set PX and make a Responsive webpage. But it is not that effective. It takes allot of efforts and practice.
+
+> That two unit are
