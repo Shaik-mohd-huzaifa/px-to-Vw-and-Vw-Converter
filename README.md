@@ -13,14 +13,14 @@ Here this Website helps you to convert and easily figure our the difference unit
 
 ## Purpose
 
-** The main intention of Creating this project or website is to make the beginner in web development feel comfortable with the measuring units of Css and its frameworks **
+**The main intention of Creating this project or website is to make the beginner in web development feel comfortable with the measuring units of Css and its frameworks**
 
 <br>
 <br>
 
 ## Where do we use commonly use it
 
-** We use it in ever part of the css which it comes to size below are some examples which will make you understand **
+**We use it in ever part of the css which it comes to size below are some examples which will make you understand**
 
 ```css
 font-size: 30px;
