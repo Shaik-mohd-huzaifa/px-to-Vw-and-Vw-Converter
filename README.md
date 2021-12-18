@@ -56,5 +56,15 @@ It takes in action when the width of a website is compressed or expanded. Becaus
 
 ###### Here a table From 1vw to 10 where you can find Easy to understand
 
-| Vw  | Px  |
-| --- | :-: |
+| **Vw** | **Px**  |
+| ------ | :-----: |
+| 1      | 4.12px  |
+| 2      | 8.24px  |
+| 3      | 12.36px |
+| 4      | 16.48px |
+| 5      | 20.6px  |
+| 6      | 24.72px |
+| 7      | 28.84px |
+| 8      | 32.96px |
+| 9      | 37.08px |
+| 10     | 41.2px  |
