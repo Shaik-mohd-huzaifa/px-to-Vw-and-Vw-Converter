@@ -2,6 +2,13 @@
 
 let InputValue = document.getElementById("VW").InnerHTML;
 
+// Before everthing lets Create a Clear function to clear the result
+function Clear(){
+    document.getElementById().InnerHTML = '';
+    document.getElementById().InnerHTML = '';
+    document.getElementById().InnerHTML = '';
+    document.getElementById().InnerHTML = '';
+}
 
 // Lets first convert it to Vw under a function
 // Function for ViewPort Width
