@@ -38,4 +38,17 @@ The px is the basic unit of the css and it can is the fix in size it does not ch
 
 Hence the _Fluctuating_ word refers to the changing in the size or lenght of a html or documnent elements and this is only with the **Vw and Vh**. There is way where we we can set PX and make a Responsive webpage. But it is not that effective. It takes allot of efforts and practice.
 
-> That two unit are
+> ## That two unit are
+
+- Viewport Width (Vw)
+- Viewport Height (Vh)
+
+### ViewPort Width (Vw)
+
+Vw is used when you are making a responsive website and for different aspect ratio.
+It takes in action when the width of a website is compressed or expanded. Because the now There are allot of the devices and aspect ratios. So Its has been compulsory to use to make our webpage look better in ever aspect
+
+```
+ One Px = 0.2427vw
+ One Vw = 4.12px
+```
