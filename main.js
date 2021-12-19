@@ -45,3 +45,18 @@ function Clear(){
   document.getElementById("Px1").value = '';
   document.getElementById("h1").innerHTML = '';
 }
+
+let widthcolc = document.querySelector('#h1');
+
+function size(){
+  widthcolc.textContent = window.innerWidth;
+  
+}
+
+window.onresize = size;
+
+window.addEventListener('resize', size);
+
+if(size >= 600){
+  document.getElementById("h1").style.color = "#fff";
+}
