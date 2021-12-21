@@ -57,6 +57,6 @@ window.onresize = size;
 
 window.addEventListener('resize', size);
 
-if(size >= 600){
+if(width >= 600){
   document.getElementById("h1").style.color = "#fff";
 }
