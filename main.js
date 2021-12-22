@@ -57,6 +57,13 @@ window.onresize = size;
 
 window.addEventListener('resize', size);
 
-if(width >= 600){
-  document.getElementById("h1").style.color = "#fff";
+
+let Iphone = document.getElementByValue("Select").value = "Iphone"
+console.log(Iphone);
+
+function color(){
+ 
+if(Iphone == "Iphone"){
+  document.getElementById("KnowScreenWidth").style.color = "#ff00ff";
+}
 }
