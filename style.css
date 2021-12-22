@@ -1,0 +1,14 @@
+.Width {
+  color: #ff00ff;
+}
+
+.mody {
+  color: maroon;
+}
+
+.butt {
+  width: 100px;
+  height: 35px;
+  border: 1px solid black;
+  cursor: pointer;
+}
