@@ -47,8 +47,11 @@ Hence the _Fluctuating_ word refers to the changing in the size or lenght of a h
 
 ### ViewPort Width (Vw)
 
-Vw is used when you are making a responsive website and for different aspect ratio(Screen Sizes)
-It takes in action when the width of a website is compressed or expanded. Because There are allot of the devices and aspect ratios, Which Cannot be Mentioned Or Styled Individually. So Its has been compulsory to use to make you webpage look better in ever size. You may have noticed many website which if opened in mobile they stay the same as the desktops size. To avoid this an make your Website look Cool and Responsive we relative units are used.
+- 1Vw unit is equal to the one unit of the total width of the screen
+  if Screen Width 720px then 1vw = 7.2px. the difference between % and Vw is Vw relates to the total width of the screen but % relates to the parent class
+
+- Vw is used when you are making a responsive website and for different aspect ratio(Screen Sizes)
+  It takes in action when the width of a website is compressed or expanded. Because There are allot of the devices and aspect ratios, an d Cannot be Mentioned Or Styled Individually. So Its has been mandatory to use Vw make you webpage look better in ever size, Because different element are set in bigger or Smaller size in the default browser size. But if it is used from mobile it make differ and may not match to the mobiles aspect ratio . You may have noticed many website which if opened in mobile they stay the same as the desktops size. To avoid this an make your Website look Cool and Responsive we relative units are used.
 
 ## Non-Responsive Website
 
@@ -57,12 +60,12 @@ It takes in action when the width of a website is compressed or expanded. Becaus
 <br>
 
 ```
- One Px = 0.2427vw
+ Screen Width = 412px
  One Vw = 4.12px
 
 ```
 
-> ###### Here a table From 1vw to 10vw where you can find Easy to understand
+> ###### Here a table the screen size is 420px and let's see the Vw units
 
 | **Vw** | **Px**  |
 | ------ | :-----: |
@@ -79,12 +82,12 @@ It takes in action when the width of a website is compressed or expanded. Becaus
 
 ### Viewport Height
 
-Here it is same as the unit _Vw_ but it changes when the heigth of the webpage expand or compresses. But this unit is not mostly used by the **DEVelopers**
+Here it is same as the unit _Vw_ but it changes when the heigth of the webpage expand or compresses.
 
-> ###### Here a table From 1vh to 10vh where you can find Easy to understand
+> ###### Here the screen height is 382px and the table From 1vh to 10vh where you can find Easy to understand. 1Vh is equal to how much
 
 ```
- One Px = 0.2427
+ Screen Height = 382px
  One Vh = 3.82px
 
 ```
@@ -102,4 +105,4 @@ Here it is same as the unit _Vw_ but it changes when the heigth of the webpage e
 | 9      | 34.38px |
 | 10     | 38.2px  |
 
-_The main intention to make this repo and webpage is to make the beginners who are still learning about the lenght units to make them understand this topic easil and to readuce there time by making a webpage which just calculates the units on just oneClick_
+_The main intention to make this repo and webpage is to the beginners who are still learning about the lenght units to make them understand this topic easily and to readuce there time by making a webpage which just calculates the units on just oneClick_
