@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -17,22 +19,21 @@
      <div class="outerlayer">
       <div class="converter">
            <div class="form">
-               <form action="">
                    <p>Know your Current Screen Size</p>
-                   <p id="knowScreenWidth" onclick="Display();">width: <span iid="knowscreenHeight">Height: </span></p>
+                   <p id="knowScreenWidth" class="Width">width: <span iid="knowscreenHeight">Height: </span></p>
                 <label for="SelectDevice">Select Your Device</label>
-                <select name="SelectDevice" id="Select">
-                    <option value="Custom">Custom</option>
+                <select name="SelectDevice" id="select">
                     <option value="Iphone">Iphone</option>
                     <option value="Android">Android</option>
                     <option value="Tablet">Tablet</option>
                 </select>
-                <button type="submit" onclick="color()">Submit</button>
-               </form>
+                <div class="butt" onclick="color()">Button</div>
+                <button onclick="color()">Submit</button>
            </div>
       </div>
       <div class="screenselecter">
-
+          <p><b>hello world</b></p>
+          <code>Hello World</code>
       </div>
      </div>
     <h1 id="h1" >DSFFSF</h1>
@@ -40,6 +41,6 @@
     <input type="text" name="Input" id="Px1">
     <button type="submit" onclick="input()">Submit</button>
     <button type="reset" onclick="Clear()">Clear</button>
-    <script src="main.js"></script>
+    
 </body>
 </html>
