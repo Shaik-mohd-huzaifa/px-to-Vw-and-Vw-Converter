@@ -27,7 +27,7 @@ document.getElementById("PxtoVHAnswer").innerHTML = $Px_to_viewportHeightValue;
 }
 */
 
-
+/*
 // Example to test the innerWidth for ViewPort Width
 function input(){
     let input = document.getElementById("Px1").value;
@@ -58,12 +58,15 @@ window.onresize = size;
 window.addEventListener('resize', size);
 
 
-let Iphone = document.getElementByValue("Select").value = "Iphone"
-console.log(Iphone);
-
+*/
 function color(){
- 
-if(Iphone == "Iphone"){
-  document.getElementById("KnowScreenWidth").style.color = "#ff00ff";
-}
+ // let Iphone = document.getElementById("Select").value;
+//console.log(Iphone);
+  let $colorclass = document.getElementById("knowScreenWidth");
+  if($colorclass.className = "Width"){
+    $colorclass.className += " mody";
+  }
+  else{
+    $colorclass = "Width";
+  }
 }
