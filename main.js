@@ -27,7 +27,6 @@ document.getElementById("PxtoVHAnswer").innerHTML = $Px_to_viewportHeightValue;
 }
 */
 
-/*
 // Example to test the innerWidth for ViewPort Width
 function input(){
     let input = document.getElementById("Px1").value;
@@ -58,7 +57,7 @@ window.onresize = size;
 window.addEventListener('resize', size);
 
 
-*/
+
 function color(){
  // let Iphone = document.getElementById("Select").value;
 //console.log(Iphone);
