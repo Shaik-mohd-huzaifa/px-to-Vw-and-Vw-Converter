@@ -18,7 +18,17 @@
     </div>
      <div class="outerlayer">
       <div class="converter">
-           <div class="form">
+          <div class="MainConversion">
+            <label for="ScreenWidth">Screen Width</label>
+            <input type="number" name="ScreenWidth" id="ScreenWidth">
+            <label for="ScreenHeight">Screen Height</label>
+            <input type="text" name="ScreenHeight" id="ScreenHeight">
+            <label for="PxtoVw">Number of Vw units</label>
+            <input type="text" name="PxtoVw" id="PxtoVW">
+            <label for="PxtoVh">Number of Vh Units</label>
+            <input type="text" name="PxtoVw" id="PxtoVh">
+          </div>
+           <div class="ScreenSelector">
                    <p>Know your Current Screen Size</p>
                    <p id="knowScreenWidth" class="Width">width: <span iid="knowscreenHeight">Height: </span></p>
                 <label for="SelectDevice">Select Your Device</label>
@@ -27,15 +37,10 @@
                     <option value="Android">Android</option>
                     <option value="Tablet">Tablet</option>
                 </select>
-                <div class="butt" onclick="color()">Button</div>
-                <button onclick="color()">Submit</button>
+                <button class="DeviceButton"onclick="color()">Submit</button>
            </div>
       </div>
-      <div class="screenselecter">
-          <p><b>hello world</b></p>
-          <code>Hello World</code>
-      </div>
-     </div>
+    </div>
     <h1 id="h1" >DSFFSF</h1>
     <label for="input">Enter the Number</label>
     <input type="text" name="Input" id="Px1">
