@@ -69,3 +69,13 @@ function color(){
     $colorclass = "Width";
   }
 }
+
+
+function Know(){
+  let h1 = document.querySelectorAll("#hes").innerHTML;
+    let Iphone = document.getElementById("select").value;
+     console.log(typeof Iphone);
+    if(Iphone == 'Iphone') {
+      document.getElementById("hes").style.color = "Blue";
+    }
+}
