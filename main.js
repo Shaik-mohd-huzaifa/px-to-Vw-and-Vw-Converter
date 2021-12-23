@@ -45,10 +45,10 @@ function Clear(){
   document.getElementById("h1").innerHTML = '';
 }
 
-let widthcolc = document.querySelector('#h1');
+let widthcolc = document.getElementById('hes');
 
 function size(){
-  widthcolc.textContent = window.innerWidth;
+  widthcolc.textContent = screen.innerWidth;
   
 }
 
@@ -76,6 +76,9 @@ function Know(){
     let Iphone = document.getElementById("select").value;
      console.log(typeof Iphone);
     if(Iphone == 'Iphone') {
-      document.getElementById("hes").style.color = "Blue";
+      document.getElementById("ScreenWidth").value = 780;
+      document.getElementById("ScreenWidth").readOnly = true;
+      document.getElementById("ScreenWidth").ariaDisabled = true;
+    
     }
 }
