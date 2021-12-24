@@ -71,18 +71,30 @@ function color(){
 }
 
 
-function Know(){
-  let h1 = document.querySelectorAll("#hes").innerHTML;
-    let Iphone = document.getElementById("select").value;
-     console.log(typeof Iphone);
-    if(Iphone == 'Iphone') {
+let h1 = document.querySelectorAll("#hes").innerHTML;
+
+// Assigning the value or getting the value from user
+let DeviceSelect;
+ console.log(typeof Iphone);
+let widthInput = document.getElementById("ScreenWidth").innerHTML;
+let heightInput = document.getElementById("ScreenHeight");
+
+function Choice(){
+  let DeviceSelect = document.getElementById("select").value;
+    if(DeviceSelect == 'Iphone'){// for Iphone {
       // It changes the empty input to iphone viewport size
       document.getElementById("ScreenWidth").value = 390;
       document.getElementById("ScreenHeight").value = 844;
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
+    }else if(DeviceSelect == "Android"){
+        widthInput = 22232;
+     // document.getElementById("ScreenWidth").value = 3433;
+      // It does not allow the user to change the value
+     document.getElementById("ScreenWidth").disabled = true;
+     document.getElementById("ScreenHeight").disabled = true;
     }
-}
+  }
 
 
