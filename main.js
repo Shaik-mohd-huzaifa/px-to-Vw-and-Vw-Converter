@@ -110,13 +110,33 @@ function Choice(){
      }else if(DeviceSelect == "Custom"){DeviceHeight = 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
-       DeviceWidth = innerHeight;// clients inital device
-      document.getElementById("ScreenWidth").value = myScreenWidth;
-      document.getElementById("ScreenHeight").value = myScreenHeight;
+       DeviceWidth = innerWidth;// clients inital device
+      document.getElementById("ScreenWidth").value = innerWidth;
+      document.getElementById("ScreenHeight").value = innerWidth;
      }
 
   }
 
-
-
-
+  function Colcolate(){  // It is a string so we need to first convert it to number to convert to px
+     let WidthToCalculate = Number(document.getElementById("ScreenWidth").value);
+     let HeightToCalculate = Number(document.getElementById("ScreenHeight").value);
+     //document.getElementById("hes").innerHTML = WidthToCalculate;
+     /* The reason to do this if the value enter is Not a number it must give out a statement with indicates 
+     not a number. Because it is not comparing in a directly (WidhtTocalculate = NaN or toNan) its not working
+     So if the input is string and after convert it shows a NaN but the type of Nan is Number it has to be converted
+     first to string and then Compared */
+     let WidthToCalculateNaN = WidthToCalculate + "";
+     let HeightToCalculateNaN = HeightToCalculate + "";   
+     console.log(typeof WidthToCalculate); // First
+     console.log(typeof HeightToCalculate);
+    if(WidthToCalculateNaN == 'NaN' || HeightToCalculateNaN == 'NaN'){
+      document.getElementById('hes').innerHTML = "Not a Number";
+    }else if(WidthToCalculate == '' && HeightToCalculate == ''){
+        document.getElementById('hes').innerHTML = "Give the Input";
+     }else if(WidthToCalculate == ''){
+     document.getElementById('hes').innerHTML = "Give the width";
+    }else if(HeightToCalculate == ''){
+      document.getElementById('hes').innerHTML = "Give the height";
+    }
+    
+  }
