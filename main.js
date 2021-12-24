@@ -76,9 +76,13 @@ function Know(){
     let Iphone = document.getElementById("select").value;
      console.log(typeof Iphone);
     if(Iphone == 'Iphone') {
-      document.getElementById("ScreenWidth").value = 780;
-      document.getElementById("ScreenWidth").readOnly = true;
-      document.getElementById("ScreenWidth").ariaDisabled = true;
-    
+      // It changes the empty input to iphone viewport size
+      document.getElementById("ScreenWidth").value = 390;
+      document.getElementById("ScreenHeight").value = 844;
+      // It does not allow the user to change the value
+     document.getElementById("ScreenWidth").disabled = true;
+     document.getElementById("ScreenHeight").disabled = true;
     }
 }
+
+
