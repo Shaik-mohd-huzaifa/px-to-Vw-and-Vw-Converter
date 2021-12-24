@@ -138,5 +138,25 @@ function Choice(){
     }else if(HeightToCalculate == ''){
       document.getElementById('hes').innerHTML = "Give the height";
     }
+    let VwPxInput = Number(document.getElementById("PxtoVW").value);
+    let VhPxInput = Number(document.getElementById("PxtoVh").value);
+     // Here this cocersion takes place and it converts the NaN to String "NaN" 
+     let VwPxInputNaN = VwPxInput + "";
+     let VhPxInputNaN = VhPxInput + "";
+
+     // Here this logic converts the px Viewport to Vw and Vh units 
+    let PxtoVw = WidthToCalculate * VwPxInput / 100;
+    let PxtoVh = HeightToCalculate * VhPxInput / 100;
     
+   if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
+      document.getElementById('').innerHTML = "Enter a Valid value";      
+   }else if(VwPxInput == '' && VhPxInput == ''){
+        document.getElementById('').innerHTML = "Enter the Vw and Vh units"
+    }else if(VwPxInput == ''){
+      document.getElementById('').innerHTML = "Enter the Vw units"
+    }else if(VhPxInput == ''){
+      document.getElementById('').innerHTML = "Enter the Vh units"
+    }
+    document.getElementById("PxtoVwResult").innerHTML = PxtoVw;
+    document.getElementById("PxtoVhResult").innerHTML = PxtoVh;  
   }
