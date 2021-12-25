@@ -5,8 +5,12 @@ body {
 
 .top-head {
   display: flex;
-  background-color: #cddc39;
-  padding: 10px;
+  background-image: linear-gradient(
+    90deg,
+    #1a2a6c 0%,
+    #b21f1f 50%,
+    #fdbb2d 100%
+  );
   margin: 0px;
 }
 
@@ -17,25 +21,36 @@ body {
   color: white;
   font-weight: 600;
   width: 50%;
-  padding: 0px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 .Media-Queries {
   width: 50%;
+  padding-top: 0px;
 }
 .Media-Queries > ul {
   display: flex;
-  column-gap: 10px;
+  column-gap: 25px;
   float: right;
-  padding-right: 10px;
-  margin-top: 0px;
+  padding-right: 30px;
 }
 
 .Media-Queries > ul > li {
   list-style: none;
-  font-family: Rubik;
+  border: 2px solid white;
+  font-family: montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 20px;
+  color: white;
+  padding: 5px 15px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
-
+.Media-Queries li:hover {
+  transform: scale(1.05);
+}
 .Media-Queries > ul > li abbr[title] {
   text-decoration: none;
 }
