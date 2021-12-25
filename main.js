@@ -115,7 +115,7 @@ function Choice(){
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
       document.getElementById("ScreenWidth").value = innerWidth;
-      document.getElementById("ScreenHeight").value = innerWidth;
+      document.getElementById("ScreenHeight").value = innerHeight;
      }
   }
 
