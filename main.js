@@ -147,16 +147,25 @@ function Choice(){
      // Here this logic converts the px Viewport to Vw and Vh units 
     let PxtoVw = WidthToCalculate * VwPxInput / 100;
     let PxtoVh = HeightToCalculate * VhPxInput / 100;
-    
-   if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
-      document.getElementById('').innerHTML = "Enter a Valid value";      
-   }else if(VwPxInput == '' && VhPxInput == ''){
-        document.getElementById('').innerHTML = "Enter the Vw and Vh units"
-    }else if(VwPxInput == ''){
-      document.getElementById('').innerHTML = "Enter the Vw units"
-    }else if(VhPxInput == ''){
-      document.getElementById('').innerHTML = "Enter the Vh units"
+    if(VwPxInput > 0 && VhPxInput > 0){
+      document.getElementById("PxtoVwResult").innerHTML = PxtoVw;
+      document.getElementById("PxtoVhResult").innerHTML = PxtoVh;   
+    }else if(VwPxInput = 0){
+      document.getElementById("PxtoVwResult").innerHTML = "Enter a Postive Value";        
+    }else if(VhPxInput = 0){
+      document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";  
     }
-    document.getElementById("PxtoVwResult").innerHTML = PxtoVw;
-    document.getElementById("PxtoVhResult").innerHTML = PxtoVh;  
+   
+   /// This Displayes in the bigger text "H4" this is universal Problems
+   // 1. If the value is not entered 
+    if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
+      document.getElementById('hes').innerHTML = "Enter a Valid value";      
+   }else if(VwPxInput == 0 && VhPxInput == 0){
+        document.getElementById('hes').innerHTML = "Enter the Vw and Vh units";
+    }else if(VwPxInput == ''){
+      document.getElementById('hes').innerHTML = "Enter the Vw units";
+    }else if(VhPxInput == ''){
+      document.getElementById('hes').innerHTML = "Enter the Vh units";
+    }
+     
   }
