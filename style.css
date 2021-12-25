@@ -70,12 +70,13 @@ body {
 
 .MainConversion {
   text-align: center;
+  padding-top: 30px;
 }
 
 .MainConversion #displayresult {
   width: 100%;
   height: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-family: poppins;
 }
 
@@ -83,17 +84,22 @@ body {
   font-size: 40px;
   margin: 0px 0px;
 }
+
+#displayresult #MistakeDisplay {
+  font-weight: 500;
+}
 .converter .MainConversion input {
   display: block;
   margin: auto;
   width: 30%;
   font-size: 20px;
   padding: 3px;
-  border: 2px solid gray;
+  border: 0px;
   border-radius: 20px;
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
+  background-color: #fdbb2dcc;
 }
 
 .converter .MainConversion label {
