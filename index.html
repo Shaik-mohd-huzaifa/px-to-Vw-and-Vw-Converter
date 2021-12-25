@@ -36,23 +36,26 @@
             <label for="PxtoVh">Number of Vh Units</label>
             <p id="PxtoVhResult"></p>
             <input type="text" name="PxtoVw" id="PxtoVh">
-            <button class="DeviceButton" onclick="Choice(); Colcolate()">Check</button>
+            <button class="DeviceButton" onclick="Colcolate()">Check</button>
 
           </div>
         </div>
            <div class="ScreenSelector">
                <div id="knowScreensize">
-                   <p>Know your Current Screen Size</p>
-                   <p id="knowScreenWidth" class="Width">width: <span iid="knowscreenHeight">Height: </span></p>
-                    <button>Check</button>
+                   <h5>Know your Current Screen Size</h5>
+                   <div class="ScreenSizeChecker">
+                   <p id="knowScreenWidth" class="Width">width: </p>
+                   <p id="knowscreenHeight">Height: </p>
+                </div>
                 </div>
                 <div id="ScreenSelection">
                    <label for="SelectDevice">Select Your Device</label>
-                <select name="SelectDevice" id="select">
-                    <option value="Yourdevice">Your Device</option>
-                    <option value="Iphone">Iphone</option>
-                    <option value="Android">Android</option>
-                    <option value="Tablet">Tablet</option>
+                <select name="SelectDevice" onselect="Choice()" id="select">
+                    <option value="Custom" onclick="Choice()">Custom</option>
+                    <option value="Yourdevice" onclick="Choice()">Your Device</option>
+                    <option value="Iphone" onclick="Choice()">Iphone</option>
+                    <option value="Android" onclick="Choice()">Android</option>
+                    <option value="Tablet" onclick="Choice()">Tablet</option>
                 </select>
                 <button type="submit" onclick="">Check</button>
            </div>

@@ -119,3 +119,39 @@ body {
   color: white;
   border-radius: 4px;
 }
+
+.ScreenSelector {
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  display: block;
+  padding-top: 30px;
+}
+
+.ScreenSelector #knowScreensize {
+  width: 100%;
+}
+
+.ScreenSelector #knowScreensize h5 {
+  font-size: 40px;
+  margin: 0px;
+  margin-top: 10px;
+  font-family: poppins;
+}
+
+.ScreenSizeChecker {
+  display: flex;
+  font-family: poppins;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.ScreenSizeChecker #knowScreenWidth {
+  width: 50%;
+  text-align: center;
+}
+
+#knowScreenHeight {
+  width: 500px;
+}
