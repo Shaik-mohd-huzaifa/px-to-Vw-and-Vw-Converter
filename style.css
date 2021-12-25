@@ -57,3 +57,36 @@ body {
 .Media-Queries > ul > li abbr[title] {
   text-decoration: none;
 }
+
+.outerlayer {
+  padding: 10px;
+  display: flex;
+}
+
+.converter {
+  width: 50%;
+  padding: 10px;
+}
+
+.MainConversion {
+  text-align: center;
+}
+
+.MainConversion #displayresult {
+  width: 90%;
+  height: 60px;
+}
+.converter .MainConversion input {
+  display: block;
+  margin: auto;
+  width: 30%;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.converter .MainConversion label {
+  margin-top: 10px;
+}
