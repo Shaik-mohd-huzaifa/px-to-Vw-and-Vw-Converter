@@ -53,7 +53,6 @@ body {
   transform: scale(1.04);
   color: #fdbb2d;
   background-color: white;
-  font-size: 20px;
 }
 .Media-Queries > ul > li abbr[title] {
   text-decoration: none;
