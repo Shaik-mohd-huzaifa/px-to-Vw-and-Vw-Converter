@@ -108,15 +108,20 @@ function Choice(){
       document.getElementById("ScreenWidth").disabled = true;
       document.getElementById("ScreenHeight").disabled = true;
       document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
-     }else if(DeviceSelect == "Custom"){DeviceHeight = 
+     }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
-       DeviceWidth = innerWidth;// clients inital device
+       DeviceHeidth = innerHeight;// clients inital device
        // It displays the selected device name of the header
-       document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
+       document.getElementById("HeaderDisplay").innerHTML = "This is your current screen sizes";
       document.getElementById("ScreenWidth").value = innerWidth;
       document.getElementById("ScreenHeight").value = innerHeight;
-     }
+     }else if(DeviceSelect == "Custom"){ 
+      DeviceWidth = document.getElementById("ScreenWidth").value;
+      DeviceHeight = document.getElementById("ScreenHeight").value;
+     document.getElementById("ScreenWidth").value = DeviceWidth;
+     document.getElementById("ScreenHeight").value = DeviceHeight;
+    }
   }
 
   function Colcolate(){  // It is a string so we need to first convert it to number to convert to px
@@ -170,4 +175,10 @@ function Choice(){
     }else if(VhPxInput == ''){
       document.getElementById('MistakeDisplay').innerHTML = "Enter the Vh units";
     }
+  }
+
+
+  function Clearinput(){
+    document.getElementById("ScreenWidth").value = "";
+    document.getElementById("ScreenHeight").value = "";
   }
