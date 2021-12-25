@@ -45,12 +45,12 @@ body {
   border-radius: 20px;
   color: white;
   padding: 5px 15px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .Media-Queries li:hover {
   transform: scale(1.05);
-  color: #b21f1f;
+  color: #fdbb2d;
   background-color: white;
 }
 .Media-Queries > ul > li abbr[title] {
