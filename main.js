@@ -167,5 +167,4 @@ function Choice(){
     }else if(VhPxInput == ''){
       document.getElementById('hes').innerHTML = "Enter the Vh units";
     }
-     
   }

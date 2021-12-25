@@ -1,14 +1,41 @@
-.Width {
-  color: #ff00ff;
+body {
+  box-sizing: border-box;
+  margin: 0px;
 }
 
-.mody {
-  color: maroon;
+.top-head {
+  display: flex;
+  background-color: #cddc39;
+  padding: 10px;
+  margin: 0px;
 }
 
-.butt {
-  width: 100px;
-  height: 35px;
-  border: 1px solid black;
-  cursor: pointer;
+.top-head > h1 {
+  margin: 0px;
+  margin-top: 10px;
+  font-family: poppins;
+  color: white;
+  font-weight: 600;
+  width: 50%;
+  padding: 0px;
+}
+
+.Media-Queries {
+  width: 50%;
+}
+.Media-Queries > ul {
+  display: flex;
+  column-gap: 10px;
+  float: right;
+  padding-right: 10px;
+  margin-top: 0px;
+}
+
+.Media-Queries > ul > li {
+  list-style: none;
+  font-family: Rubik;
+}
+
+.Media-Queries > ul > li abbr[title] {
+  text-decoration: none;
 }
