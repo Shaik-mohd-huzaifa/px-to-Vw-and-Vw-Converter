@@ -132,13 +132,14 @@ function Choice(){
      console.log(typeof WidthToCalculate); // First
      console.log(typeof HeightToCalculate);
     if(WidthToCalculateNaN == 'NaN' || HeightToCalculateNaN == 'NaN'){
-      document.getElementById('hes').innerHTML = "Not a Number";
+      document.getElementById('MistakeDisplay').innerHTML = "Not a Number";
+      document.getElementById("PxtoVhResult").innerHTML = "Not a Number";
     }else if(WidthToCalculate == '' && HeightToCalculate == ''){
-        document.getElementById('hes').innerHTML = "Give the Input";
+        document.getElementById('MistakeDisplay').innerHTML = "Give the Input";
      }else if(WidthToCalculate == ''){
-     document.getElementById('hes').innerHTML = "Give the width";
+     document.getElementById('MistakeDisplay').innerHTML = "Give the width";
     }else if(HeightToCalculate == ''){
-      document.getElementById('hes').innerHTML = "Give the height";
+      document.getElementById('MistakeDisplay').innerHTML = "Give the height";
     }
     let VwPxInput = Number(document.getElementById("PxtoVW").value);
     let VhPxInput = Number(document.getElementById("PxtoVh").value);
@@ -161,12 +162,12 @@ function Choice(){
    /// This Displayes in the bigger text "H4" this is universal Problems
    // 1. If the value is not entered 
     if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
-      document.getElementById('hes').innerHTML = "Enter a Valid value";      
+      document.getElementById('MistakeDisplay').innerHTML = "Enter a Valid value";      
    }else if(VwPxInput == 0 && VhPxInput == 0){
-        document.getElementById('hes').innerHTML = "Enter the Vw and Vh units";
+        document.getElementById('MistakeDisplay').innerHTML = "Enter the Vw and Vh units";
     }else if(VwPxInput == ''){
-      document.getElementById('hes').innerHTML = "Enter the Vw units";
+      document.getElementById('MistakeDisplay').innerHTML = "Enter the Vw units";
     }else if(VhPxInput == ''){
-      document.getElementById('hes').innerHTML = "Enter the Vh units";
+      document.getElementById('MistakeDisplay').innerHTML = "Enter the Vh units";
     }
   }
