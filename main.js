@@ -82,39 +82,41 @@ function Choice(){
   let DeviceSelect = document.getElementById("select").value;
     if(DeviceSelect == 'Iphone'){// for Iphone {
       // It changes the empty input to iphone max viewport size
-       DeviceWidth = 
-       DeviceHeight = 
-      document.getElementById("ScreenWidth").value = 390;
-      document.getElementById("ScreenHeight").value = 844;
+       DeviceWidth = document.getElementById("ScreenWidth").value = 390;
+       DeviceHeight = document.getElementById("ScreenHeight").value = 844;
+       // It displays the selected device name of the header
+       document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
     }else if(DeviceSelect == "Android"){
-      DeviceWidth = 
-      DeviceHeight = 
-       // Viewport size of android device max size 
-     document.getElementById("ScreenWidth").value = 400;
-     document.getElementById("ScreenHeight").value = 854;
+             // Viewport size of android device max size 
+      DeviceWidth = document.getElementById("ScreenWidth").value = 400;
+      DeviceHeight = document.getElementById("ScreenHeight").value = 85
+      // It displays the selected device name of the header
+      document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
     }
     else if(DeviceSelect == "Tablet"){
-      DeviceWidth = 
-      DeviceHeight = 
-      document.getElementById("ScreenWidth").value = 1024;
-      document.getElementById("ScreenHeight").value = 1366;
+      DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
+      DeviceHeight = document.getElementById("ScreenHeight").value = 1366;
+       // It displays the selected device name of the header
+      document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
        // It does not allow the user to change the value
       document.getElementById("ScreenWidth").disabled = true;
       document.getElementById("ScreenHeight").disabled = true;
+      document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
      }else if(DeviceSelect == "Custom"){DeviceHeight = 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
        DeviceWidth = innerWidth;// clients inital device
+       // It displays the selected device name of the header
+       document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
       document.getElementById("ScreenWidth").value = innerWidth;
       document.getElementById("ScreenHeight").value = innerWidth;
      }
-
   }
 
   function Colcolate(){  // It is a string so we need to first convert it to number to convert to px
