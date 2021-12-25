@@ -47,11 +47,13 @@ body {
   padding: 5px 15px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-align: center;
 }
 .Media-Queries li:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   color: #fdbb2d;
   background-color: white;
+  font-size: 20px;
 }
 .Media-Queries > ul > li abbr[title] {
   text-decoration: none;
