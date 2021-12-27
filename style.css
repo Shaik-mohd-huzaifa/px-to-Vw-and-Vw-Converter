@@ -109,6 +109,12 @@ body {
   font-weight: 600;
 }
 
+.MainConversion {
+  font-family: montserrat;
+  margin: 3px;
+  font-size: 15px;
+  font-weight: 600;
+}
 .MainConversion button {
   width: 200px;
   font-family: poppins;

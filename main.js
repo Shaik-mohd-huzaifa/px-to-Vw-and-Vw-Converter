@@ -92,6 +92,8 @@ function Choice(){
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
+     document.getElementById("HeaderDisplay").innerHTML = "These are the Iphone's screen Sizes"
+     document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Iphone's Screen Sizes🍎`;
     }else if(DeviceSelect == "Android"){
              // Viewport size of android device max size 
       DeviceWidth = document.getElementById("ScreenWidth").value = 400;
@@ -101,6 +103,8 @@ function Choice(){
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
+     document.getElementById("HeaderDisplay").innerHTML = "These are the Android's screen Sizes"
+     document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;
     }
     else if(DeviceSelect == "Tablet"){
       DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
@@ -110,7 +114,9 @@ function Choice(){
        // It does not allow the user to change the value
       document.getElementById("ScreenWidth").disabled = true;
       document.getElementById("ScreenHeight").disabled = true;
-      document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
+      document.getElementById("HeaderDisplay").innerHTML = "These are the Tablet's screen Sizes";
+      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
+     
      }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
@@ -119,6 +125,7 @@ function Choice(){
        document.getElementById("HeaderDisplay").innerHTML = "This is your current screen sizes";
       document.getElementById("ScreenWidth").value = innerWidth;
       document.getElementById("ScreenHeight").value = innerHeight;
+      document.getElementById("MistakeDisplay").innerHTML = "This is the width and width of your current screen";
      }else if(DeviceSelect == "Custom"){ 
        if(DeviceWidth > 0 || DeviceHeight > 0){
         DeviceWidth = document.getElementById("ScreenWidth").value = '';
@@ -127,9 +134,8 @@ function Choice(){
         document.getElementById("ScreenHeight").value = '';
         document.getElementById("ScreenWidth").disabled = false;
       document.getElementById("ScreenHeight").disabled = false;
-
-
        }
+       document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
        document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
        document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
       DeviceWidth = document.getElementById("ScreenWidth").value;
