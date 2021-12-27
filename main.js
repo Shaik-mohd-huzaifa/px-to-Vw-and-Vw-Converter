@@ -78,6 +78,9 @@ let DeviceHeight; // It is declared to store the selected device height
 let DeviceSelect;
 
 
+
+// This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
+// if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function Choice(){
   let DeviceSelect = document.getElementById("select").value;
     if(DeviceSelect == 'Iphone'){// for Iphone {
@@ -117,6 +120,18 @@ function Choice(){
       document.getElementById("ScreenWidth").value = innerWidth;
       document.getElementById("ScreenHeight").value = innerHeight;
      }else if(DeviceSelect == "Custom"){ 
+       if(DeviceWidth > 0 || DeviceHeight > 0){
+        DeviceWidth = document.getElementById("ScreenWidth").value = '';
+        DeviceHeight = document.getElementById("ScreenHeight").value = '';
+        document.getElementById("ScreenWidth").value = '';
+        document.getElementById("ScreenHeight").value = '';
+        document.getElementById("ScreenWidth").disabled = false;
+      document.getElementById("ScreenHeight").disabled = false;
+
+
+       }
+       document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
+       document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
       DeviceWidth = document.getElementById("ScreenWidth").value;
       DeviceHeight = document.getElementById("ScreenHeight").value;
      document.getElementById("ScreenWidth").value = DeviceWidth;
