@@ -153,14 +153,14 @@ function Choice(){
      let VhPxInputNaN = VhPxInput + "";
 
      // Here this logic converts the px Viewport to Vw and Vh units 
-    let PxtoVw = WidthToCalculate * VwPxInput / 100;
-    let PxtoVh = HeightToCalculate * VhPxInput / 100;
     if(VwPxInput > 0 && VhPxInput > 0){
-      document.getElementById("PxtoVwResult").innerHTML = PxtoVw;
-      document.getElementById("PxtoVhResult").innerHTML = PxtoVh;   
-    }else if(VwPxInput = 0){
+      let PxtoVw = WidthToCalculate * VwPxInput / 100;
+      let PxtoVh = HeightToCalculate * VhPxInput / 100;
+      document.getElementById("PxtoVwResult").innerHTML = `${PxtoVw}px is the ${VwPxInput} units of ${DeviceWidth}`;
+      document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;   
+    }else if(VwPxInput <= 0){
       document.getElementById("PxtoVwResult").innerHTML = "Enter a Postive Value";        
-    }else if(VhPxInput = 0){
+    }else if(VhPxInput <= 0){
       document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";  
     }
    
