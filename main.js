@@ -40,17 +40,28 @@ function input(){
 console.log(window.innerWidth);
 
 */
+// This clears the input and output 
 
+function Clear(){ 
+  document.getElementById("ScreenWidth").value = "";
+  document.getElementById("ScreenHeight").value = "";
+  document.getElementById("PxtoVwResult").innerHTML = "";
+  document.getElementById("PxtoVhResult").innerHTML = "";
+  document.getElementById("PxtoVW").value = '';
+  document.getElementById("PxtoVh").value = '';
+
+}
+
+function Clearinfo(){
+  document.getElementById("Screenwidthinfo").value = "";
+  document.getElementById("Screenheightinfo").value = "";
+}
 
 let DeviceWidth; // It is declared to store the selected device weight
 let DeviceHeight; // It is declared to store the selected device height 
 // Assigning the value or getting the value from user
 let DeviceSelect;
 
-// This are the default for clients visits the page
-document.getElementById("MistakeDisplay").innerHTML = `Enter a width and height you want to convert for 🔮`;
-document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
-document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
 
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
@@ -93,7 +104,7 @@ function Choice(){
       document.getElementById("ScreenHeight").disabled = true;
       document.getElementById("HeaderDisplay").innerHTML = "These are the Tablet's screen Sizes";
       document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
-      document.getElementById("Screenwidthinfo").innerHTML = "";
+      document.getElementById("Screenheightinfo").innerHTML = "";
       document.getElementById("Screenheightinfo").innerHTML = "";
      }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
@@ -115,6 +126,7 @@ function Choice(){
         document.getElementById("ScreenWidth").disabled = false;
       document.getElementById("ScreenHeight").disabled = false;
        }
+       document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
        document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
        document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
        document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
@@ -180,8 +192,3 @@ document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";
     }
   }
 
-
-  function Clearinput(){
-    document.getElementById("ScreenWidth").value = "";
-    document.getElementById("ScreenHeight").value = "";
-  }
