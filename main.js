@@ -76,8 +76,10 @@ let DeviceWidth; // It is declared to store the selected device weight
 let DeviceHeight; // It is declared to store the selected device height 
 // Assigning the value or getting the value from user
 let DeviceSelect;
-
-
+// This is the default for clients visits the page
+document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
+       document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
+       document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
 
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
