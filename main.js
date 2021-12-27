@@ -40,35 +40,7 @@ function input(){
 console.log(window.innerWidth);
 
 
-function Clear(){
-  document.getElementById("Px1").value = '';
-  document.getElementById("h1").innerHTML = '';
-}
 
-let widthcolc = document.querySelectorAll('#hes');
-
-function size(){
-  widthcolc.textContent = screen.innerWidth;
-  
-}
-
-window.onresize = size;
-
-window.addEventListener('resize', size);
-
-
-
-function color(){
- // let Iphone = document.getElementById("Select").value;
-//console.log(Iphone);
-  let $colorclass = document.getElementById("knowScreenWidth");
-  if($colorclass.className = "Width"){
-    $colorclass.className += " mody";
-  }
-  else{
-    $colorclass = "Width";
-  }
-}
 
 
 let h1 = document.querySelectorAll("#hes").innerHTML;
