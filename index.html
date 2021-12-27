@@ -25,21 +25,24 @@
      <div class="outerlayer">
       <div class="converter">
           <div class="MainConversion">
-            <div id="displayresult"><h5 id="HeaderDisplay">Enter the Value</h5><p id="MistakeDisplay">Mistakes get display here</p></div>  
+            <div id="displayresult">
+                <h5 id="HeaderDisplay">Enter the Value</h5>
+                <p id="MistakeDisplay">Enter a width and height you want to convert for 🔮</p>
+            </div>  
             <label for="ScreenWidth">Screen Width</label>
-            <p id="Screenwidthinfo"></p>
             <input type="text" name="ScreenWidth" id="ScreenWidth">
+            <p id="Screenwidthinfo">Enter the Width</p>
             <label for="ScreenHeight">Screen Height</label>
-            <p id="Screenheightinfo"></p>
             <input type="text" name="ScreenHeight" id="ScreenHeight">
-            <label for="PxtoVw">Number of Vw units</label>
+            <p id="Screenheightinfo">Enter the Height</p>
+            <label for="PxtoVw" >Number of Vw units</label>
             <input type="text" name="PxtoVw" id="PxtoVW">
             <p id="PxtoVwResult"></p>
-            <label for="PxtoVh">Number of Vh Units</label>
+            <label for="PxtoVh" >Number of Vh Units</label>
             <p id="PxtoVhResult"></p>
             <input type="text" name="PxtoVw" id="PxtoVh">
-            <button class="DeviceButton" onclick="Colcolate()">Check</button>
-
+            <button class="DeviceButton" onclick="Colcolate(); Clearinfo()">Check</button>
+            <button class="DeviceButton" onclick="Clear()">Clear</button>
           </div>
         </div>
            <div class="ScreenSelector">
