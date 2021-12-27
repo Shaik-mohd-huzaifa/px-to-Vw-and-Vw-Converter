@@ -25,7 +25,7 @@ function Px_to_ViewPortHeight(){
 let $Px_to_viewportHeightValue = InputValue * 0.;
 document.getElementById("PxtoVHAnswer").innerHTML = $Px_to_viewportHeightValue;
 }
-*/
+
 
 // Example to test the innerWidth for ViewPort Width
 function input(){
@@ -39,19 +39,18 @@ function input(){
 
 console.log(window.innerWidth);
 
+*/
 
 
-
-
-let h1 = document.querySelectorAll("#hes").innerHTML;
 let DeviceWidth; // It is declared to store the selected device weight
 let DeviceHeight; // It is declared to store the selected device height 
 // Assigning the value or getting the value from user
 let DeviceSelect;
-// This is the default for clients visits the page
-document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
-       document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
-       document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
+
+// This are the default for clients visits the page
+document.getElementById("MistakeDisplay").innerHTML = `Enter a width and height you want to convert for 🔮`;
+document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
+document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
 
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
@@ -68,6 +67,8 @@ function Choice(){
      document.getElementById("ScreenHeight").disabled = true;
      document.getElementById("HeaderDisplay").innerHTML = "These are the Iphone's screen Sizes"
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Iphone's Screen Sizes🍎`;
+     document.getElementById("Screenwidthinfo").innerHTML = "";
+     document.getElementById("Screenheightinfo").innerHTML = "";     
     }else if(DeviceSelect == "Android"){
              // Viewport size of android device max size 
       DeviceWidth = document.getElementById("ScreenWidth").value = 400;
@@ -77,8 +78,10 @@ function Choice(){
       // It does not allow the user to change the value
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
-     document.getElementById("HeaderDisplay").innerHTML = "These are the Android's screen Sizes"
+     document.getElementById("HeaderDisplay").innerHTML = "These are the Android's screen Sizes";
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;
+     document.getElementById("Screenwidthinfo").innerHTML = "";
+     document.getElementById("Screenheightinfo").innerHTML = "";     
     }
     else if(DeviceSelect == "Tablet"){
       DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
@@ -90,16 +93,19 @@ function Choice(){
       document.getElementById("ScreenHeight").disabled = true;
       document.getElementById("HeaderDisplay").innerHTML = "These are the Tablet's screen Sizes";
       document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
-     
+      document.getElementById("Screenwidthinfo").innerHTML = "";
+      document.getElementById("Screenheightinfo").innerHTML = "";
      }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
        DeviceHeidth = innerHeight;// clients inital device
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = "This is your current screen sizes";
-      document.getElementById("ScreenWidth").value = innerWidth;
-      document.getElementById("ScreenHeight").value = innerHeight;
-      document.getElementById("MistakeDisplay").innerHTML = "This is the width and width of your current screen";
+       document.getElementById("ScreenWidth").value = innerWidth;
+       document.getElementById("ScreenHeight").value = innerHeight;
+       document.getElementById("MistakeDisplay").innerHTML = "This is the width and height of your current screen";
+       document.getElementById("Screenwidthinfo").innerHTML = "";
+       document.getElementById("Screenheightinfo").innerHTML = "";
      }else if(DeviceSelect == "Custom"){ 
        if(DeviceWidth > 0 || DeviceHeight > 0){
         DeviceWidth = document.getElementById("ScreenWidth").value = '';
@@ -128,7 +134,9 @@ function Choice(){
      So if the input is string and after convert it shows a NaN but the type of Nan is Number it has to be converted
      first to string and then Compared */
      let WidthToCalculateNaN = WidthToCalculate + "";
-     let HeightToCalculateNaN = HeightToCalculate + "";   
+     let HeightToCalculateNaN = HeightToCalculate + ""; 
+     document.getElementById("PxtoVwResult").innerHTML = "Enter a Postive Value";
+document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";  
      console.log(typeof WidthToCalculate); // First
      console.log(typeof HeightToCalculate);
     if(WidthToCalculateNaN == 'NaN' || HeightToCalculateNaN == 'NaN'){
