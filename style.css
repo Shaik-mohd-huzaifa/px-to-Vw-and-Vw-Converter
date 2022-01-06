@@ -214,6 +214,22 @@ body {
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
-    font-size: 15px;
+    font-size: 3.5vw;
+    font-weight: 600;
+    margin: auto;
+    padding-bottom: 0px;
+    padding-left: 10px;
+  }
+
+  .Media-Queries > ul {
+    padding-right: 10px;
+    column-gap: 10px;
+  }
+  .Media-Queries > ul > li {
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 6px;
   }
 }
