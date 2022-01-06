@@ -211,3 +211,9 @@ body {
   color: white;
   border-radius: 4px;
 }
+
+@media screen and (max-width: 550px) {
+  .top-head > h1 {
+    font-size: 15px;
+  }
+}
