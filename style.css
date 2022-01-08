@@ -26,9 +26,12 @@ body {
 }
 .Media-Queries > ul {
   display: flex;
+  flex-wrap: nowrap;
   column-gap: 25px;
   float: right;
   padding-right: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .Media-Queries > ul > li {
@@ -231,6 +234,7 @@ body {
   }
   .Media-Queries > ul > li {
     font-size: 13px;
+    float: right;
     font-weight: 600;
     border-radius: 5px;
     border: 1px solid white;
