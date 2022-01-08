@@ -209,13 +209,6 @@ body {
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
-    width: 45%;
-  }
-
-  .Media-Queries {
-    width: 55%;
-  }
-  .top-head > h1 {
     font-size: 3.5vw;
     font-weight: 600;
     margin: auto;
