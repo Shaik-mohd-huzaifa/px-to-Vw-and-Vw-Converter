@@ -209,6 +209,13 @@ body {
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
+    width: 46%;
+  }
+
+  .Media-Queries {
+    float: right;
+  }
+  .top-head > h1 {
     font-size: 3.5vw;
     font-weight: 600;
     margin: auto;
@@ -219,6 +226,7 @@ body {
   .Media-Queries > ul {
     padding-right: 10px;
     column-gap: 10px;
+    padding-left: 0px;
   }
   .Media-Queries > ul > li {
     font-size: 13px;
