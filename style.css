@@ -5,12 +5,7 @@ body {
 
 .top-head {
   display: flex;
-  background-image: linear-gradient(
-    90deg,
-    #1a2a6c 0%,
-    #b21f1f 50%,
-    #fdbb2d 100%
-  );
+  background-color: black;
   margin: 0px;
 }
 
@@ -51,7 +46,7 @@ body {
 }
 .Media-Queries li:hover {
   transform: scale(1.04);
-  color: #fdbb2d;
+  color: #000;
   background-color: white;
 }
 .Media-Queries > ul > li abbr[title] {
@@ -214,6 +209,13 @@ body {
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
+    width: 45%;
+  }
+
+  .Media-Queries {
+    width: 55%;
+  }
+  .top-head > h1 {
     font-size: 3.5vw;
     font-weight: 600;
     margin: auto;
@@ -227,7 +229,7 @@ body {
   }
   .Media-Queries > ul > li {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 5px;
     border: 1px solid white;
     padding: 6px;
