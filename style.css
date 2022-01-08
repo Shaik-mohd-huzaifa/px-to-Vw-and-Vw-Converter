@@ -209,11 +209,12 @@ body {
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
-    width: 46%;
+    width: 40%;
   }
 
   .Media-Queries {
     float: right;
+    width: 60%;
   }
   .top-head > h1 {
     font-size: 3.5vw;
