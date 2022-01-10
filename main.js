@@ -146,7 +146,7 @@ function Choice(){
     }
   }
 
-  function Colcolate(){  // It is a string so we need to first convert it to number to convert to px
+  function Calculate(){  // It is a string so we need to first convert it to number to convert to px
      let WidthToCalculate = Number(document.getElementById("ScreenWidth").value);
      let HeightToCalculate = Number(document.getElementById("ScreenHeight").value);
      //document.getElementById("hes").innerHTML = WidthToCalculate;
