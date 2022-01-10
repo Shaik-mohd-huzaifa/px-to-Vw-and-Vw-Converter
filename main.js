@@ -54,8 +54,8 @@ function Clear(){
 
 // This function clear the 
 function Clearinfo(){
-  document.getElementById("Screenwidthinfo").value = "";
-  document.getElementById("Screenheightinfo").value = "";
+  document.getElementById("Screenwidthinfo").innerHTML = "";
+  document.getElementById("Screenheightinfo").innerHTML = "";
 }
 
 
