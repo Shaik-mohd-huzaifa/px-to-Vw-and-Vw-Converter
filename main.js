@@ -52,13 +52,19 @@ function Clear(){
 
 }
 
+// This function clear the 
 function Clearinfo(){
   document.getElementById("Screenwidthinfo").value = "";
   document.getElementById("Screenheightinfo").value = "";
 }
 
-let DeviceWidth; // It is declared to store the selected device weight
-let DeviceHeight; // It is declared to store the selected device height 
+
+ // It is declared to store the selected device weight
+let DeviceWidth;
+
+// It is declared to store the selected device height 
+let DeviceHeight;
+
 // Assigning the value or getting the value from user
 let DeviceSelect;
 
