@@ -84,6 +84,9 @@ body {
 
 #displayresult #MistakeDisplay {
   font-weight: 500;
+  font-family: youtube sans;
+  font-size: 18px;
+  font-weight: 500;
 }
 .converter .MainConversion input {
   display: block;
@@ -92,15 +95,15 @@ body {
   font-size: 20px;
   padding: 3px;
   border: 0px;
+  font-family: Montserrat;
   border-radius: 20px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
   background-color: rgb(177, 177, 177);
 }
 
 .converter .MainConversion label {
-  margin-top: 10px;
   font-size: 18px;
   font-family: youtube sans;
   font-weight: 600;
