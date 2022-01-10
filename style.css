@@ -96,21 +96,20 @@ body {
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #fdbb2dcc;
+  background-color: rgb(177, 177, 177);
 }
 
 .converter .MainConversion label {
   margin-top: 10px;
-  font-size: 20px;
-  font-family: montserrat;
+  font-size: 18px;
+  font-family: youtube sans;
   font-weight: 600;
 }
 /* Global Place holder Styling*/
 
 input::placeholder {
-  font-family: poppins;
-  color: black;
-  font-size: 1rem;
+  font-family: youtube sans;
+  color: rgba(0, 0, 0, 0.671);
 }
 
 .MainConversion {
@@ -120,11 +119,11 @@ input::placeholder {
   font-weight: 600;
 }
 .MainConversion button {
-  width: 200px;
+  width: 13.5vw;
   font-family: poppins;
   font-size: 18px;
   padding: 5px 10px;
-  background-color: rgb(0, 0, 61);
+  background-color: #000;
   border: 0px;
   color: white;
   border-radius: 4px;
