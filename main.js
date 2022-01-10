@@ -146,7 +146,10 @@ function Choice(){
     }
   }
 
-  function Calculate(){  // It is a string so we need to first convert it to number to convert to px
+  // This function finds out the vw and vh value of the px input 
+  function Calculate(){  
+  
+    // because the input is in string so we need to first convert it to number to convert to px
      let WidthToCalculate = Number(document.getElementById("ScreenWidth").value);
      let HeightToCalculate = Number(document.getElementById("ScreenHeight").value);
      //document.getElementById("hes").innerHTML = WidthToCalculate;
