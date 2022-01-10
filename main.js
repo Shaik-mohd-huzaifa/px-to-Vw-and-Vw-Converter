@@ -119,21 +119,30 @@ function Choice(){
        document.getElementById("Screenheightinfo").innerHTML = "";
      }else if(DeviceSelect == "Custom"){ 
        if(DeviceWidth > 0 || DeviceHeight > 0){
+
+       // Clearing the value if any value is present in the input
         DeviceWidth = document.getElementById("ScreenWidth").value = '';
         DeviceHeight = document.getElementById("ScreenHeight").value = '';
+        
+       // If any value filled it clears when selected custom
         document.getElementById("ScreenWidth").value = '';
         document.getElementById("ScreenHeight").value = '';
+        
+       // turned off the disabled placeholder while choosen custom 
         document.getElementById("ScreenWidth").disabled = false;
-      document.getElementById("ScreenHeight").disabled = false;
+        document.getElementById("ScreenHeight").disabled = false;
        }
+       // Heading if the custom value is selected
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
        document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
-       document.getElementById("Screenwidthinfo").innerHTML = "Enter the Width";
-       document.getElementById("Screenheightinfo").innerHTML = "Enter the Height";
-      DeviceWidth = document.getElementById("ScreenWidth").value;
-      DeviceHeight = document.getElementById("ScreenHeight").value;
-     document.getElementById("ScreenWidth").value = DeviceWidth;
-     document.getElementById("ScreenHeight").value = DeviceHeight;
+
+       // Asks for the input from the user if the custom height
+       document.getElementById("ScreenWidth").placeholder = "Enter the Width";
+       document.getElementById("ScreenHeight").placeholder = "Enter the Height";
+      
+      // Storing the value entered by the user 
+       DeviceWidth = document.getElementById("ScreenWidth").value;
+       DeviceHeight = document.getElementById("ScreenHeight").value;
     }
   }
 
