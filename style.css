@@ -106,6 +106,13 @@ body {
   font-family: montserrat;
   font-weight: 600;
 }
+/* Global Place holder Styling*/
+
+input::placeholder {
+  font-family: poppins;
+  color: black;
+  font-size: 1rem;
+}
 
 .MainConversion {
   font-family: montserrat;
