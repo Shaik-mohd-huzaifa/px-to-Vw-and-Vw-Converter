@@ -125,7 +125,7 @@ function Choice(){
        document.getElementById("PxtoVW").placeholder = "Enter the Value";
        document.getElementById("PxtoVh").placeholder = "Enter the Value";
      }else if(DeviceSelect == "Custom"){ 
-       if(DeviceWidth > 0 || DeviceHeight > 0){
+       if(DeviceWidth > 0 && DeviceHeight > 0){
 
        // Clearing the value if any value is present in the input
         DeviceWidth = document.getElementById("ScreenWidth").value = '';
@@ -138,6 +138,19 @@ function Choice(){
        // turned off the disabled placeholder while choosen custom 
         document.getElementById("ScreenWidth").disabled = false;
         document.getElementById("ScreenHeight").disabled = false;
+        if(VwPxInput > 0 && VhPxInput > 0){
+          PxtoVw = WidthToCalculate * VwPxInput / 100;
+          PxtoVh = HeightToCalculate * VhPxInput / 100;
+          
+          document.getElementById("PxtoVwResult").innerHTML = `${PxtoVw}px is the ${VwPxInput} units of ${DeviceWidth}`;
+          document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;   
+        }else if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
+          document.getElementById("PxtoVwResult").innerHTML = "Invalid Value";
+          document.getElementById("VwPxInput").value = '';        
+        }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
+          document.getElementById("PxtoVhResult").innerHTML = "Invalid Value";  
+          document.getElementById("VhPxInput").value = '';        
+        }
        }
        // Heading if the custom value is selected
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
@@ -171,7 +184,7 @@ function Choice(){
      console.log(typeof WidthToCalculate); // First
      console.log(typeof HeightToCalculate);
      
-     if(WidthToCalculate == 'Nan' && HeightToCalculate == 'Nan'){
+   if(WidthToCalculate == 'Nan' && HeightToCalculate == 'Nan'){
       document.getElementById('MistakeDisplay').innerHTML = "Invalid Value Entered";
       document.getElementById('ScreenWidth').placeholder = "Invalid Value";
       document.getElementById('ScreenHeight').placeholder = "Invalid Value";
@@ -217,7 +230,7 @@ function Choice(){
      let PxtoVh;
      
     // Here this logic converts the px Viewport to Vw and Vh units 
-    if(VwPxInput > 0 && VhPxInput > 0){
+   /* if(VwPxInput > 0 && VhPxInput > 0){
       PxtoVw = WidthToCalculate * VwPxInput / 100;
       PxtoVh = HeightToCalculate * VhPxInput / 100;
       
@@ -229,7 +242,7 @@ function Choice(){
     }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
       document.getElementById("PxtoVhResult").innerHTML = "Invalid Value";  
       document.getElementById("VhPxInput").value = '';        
-    }
+    }*/
    
    /// This Displayes in the bigger text "H4" this is universal Problems
    // 1. If the value is not entered 
