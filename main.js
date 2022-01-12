@@ -83,8 +83,8 @@ function Choice(){
      document.getElementById("ScreenHeight").disabled = true;
      document.getElementById("HeaderDisplay").innerHTML = "Iphone"
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Iphone's Screen Sizes🍎`;
-     document.getElementById("Screenwidthinfo").innerHTML = "";
-     document.getElementById("Screenheightinfo").innerHTML = "";     
+     document.getElementById("PxtoVW").value = " ";
+     document.getElementById("PxtoVh").value = " ";     
     }else if(DeviceSelect == "Android"){
              // Viewport size of android device max size 
       DeviceWidth = document.getElementById("ScreenWidth").value = 400;
@@ -95,9 +95,9 @@ function Choice(){
      document.getElementById("ScreenWidth").disabled = true;
      document.getElementById("ScreenHeight").disabled = true;
      document.getElementById("HeaderDisplay").innerHTML = "Android";
-     document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;
-     document.getElementById("Screenwidthinfo").innerHTML = "";
-     document.getElementById("Screenheightinfo").innerHTML = "";     
+     document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;    
+     document.getElementById("PxtoVW").value = " ";
+     document.getElementById("PxtoVh").value = " "; 
     }
     else if(DeviceSelect == "Tablet"){
       DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
@@ -109,8 +109,8 @@ function Choice(){
       document.getElementById("ScreenHeight").disabled = true;
       document.getElementById("HeaderDisplay").innerHTML = "Tablet";
       document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
-      document.getElementById("Screenheightinfo").innerHTML = "";
-      document.getElementById("Screenheightinfo").innerHTML = "";
+      document.getElementById("PxtoVW").value = " ";
+      document.getElementById("PxtoVh").value = " ";
      }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
@@ -120,17 +120,14 @@ function Choice(){
        document.getElementById("ScreenWidth").value = innerWidth;
        document.getElementById("ScreenHeight").value = innerHeight;
        document.getElementById("MistakeDisplay").innerHTML = "This is the width and height of your current screen";
-       document.getElementById("Screenwidthinfo").innerHTML = "";
-       document.getElementById("Screenheightinfo").innerHTML = "";
-       document.getElementById("PxtoVW").placeholder = "Enter the Value";
-       document.getElementById("PxtoVh").placeholder = "Enter the Value";
+       document.getElementById("PxtoVW").value = " ";
+       document.getElementById("PxtoVh").value = " ";  
+       
      }else if(DeviceSelect == "Custom"){
          
         // turned off the disabled placeholder while choosen custom  
          document.getElementById("ScreenWidth").disabled = false;
          document.getElementById("ScreenHeight").disabled = false;
-        DeviceWidth = document.getElementById("ScreenWidth").value;
-        DeviceHeight = document.getElementById("ScreenHeight").value;
         
        // Heading if the custom value is selected
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
@@ -139,10 +136,9 @@ function Choice(){
        // Asks for the input from the user if the custom height and Width
        document.getElementById("ScreenWidth").placeholder = "Enter the Width";
        document.getElementById("ScreenHeight").placeholder = "Enter the Height";
-      
-      // Storing the value entered by the user 
-       DeviceWidth = document.getElementById("ScreenWidth").value;
-       DeviceHeight = document.getElementById("ScreenHeight").value;
+
+       document.getElementById("PxtoVW").value = " ";
+       document.getElementById("PxtoVh").value = " ";  
 
     }
 }
