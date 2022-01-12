@@ -303,4 +303,8 @@ code {
     height: 50px;
     border-radius: 50%;
   }
+
+  .outerlayer {
+    display: block;
+  }
 }
