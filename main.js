@@ -245,7 +245,7 @@ function Choice(){
       document.getElementById("PxtoVh").placeholder = "Invalid Value";    
      
    // If the Number to convert in Vw is Nan of empty then this one is executed   
-   }else if(VwPxInputNaN <= 0 && VhPxInputNaN <= 0){
+   }else if(VwPxInput <= 0 && VhPxInput <= 0){
     document.getElementById("PxtoVW").placeholder = "Invalid Value";
     document.getElementById("PxtoVW").value = '';       
     document.getElementById("PxtoVh").placeholder = "Invalid Value";  
