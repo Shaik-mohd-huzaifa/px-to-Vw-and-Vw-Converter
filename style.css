@@ -9,8 +9,21 @@ body {
   margin: 0px;
 }
 
+/* universal button styling*/
+button {
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-align: center;
+}
 /*Styling the universal button*/
 button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
 }
 .top-head > h1 {
   margin: auto;
@@ -139,6 +152,12 @@ input::placeholder {
   border-radius: 4px;
 }
 
+.MainConversion button:active {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  text-align: center;
+}
 .ScreenSelector {
   padding: 10px;
   width: 50%;
