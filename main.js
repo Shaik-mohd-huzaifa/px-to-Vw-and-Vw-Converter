@@ -133,7 +133,6 @@ function Choice(){
         // turned off the disabled placeholder while choosen custom  
          document.getElementById("ScreenWidth").disabled = false;
          document.getElementById("ScreenHeight").disabled = false;
-       }
        // Clearing the value if any value is present in the input
         DeviceWidth = document.getElementById("ScreenWidth").value;
         DeviceHeight = document.getElementById("ScreenHeight").value;
@@ -151,6 +150,7 @@ function Choice(){
        DeviceHeight = document.getElementById("ScreenHeight").value;
     }
   }
+}
 
   console.log(DeviceWidth);
 
@@ -235,15 +235,13 @@ function Choice(){
      
    // If the Number to convert in Vw is Nan of empty then this one is executed   
    }
-   
-   
    if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
-      document.getElementById("VwPxInput").placeholder = "Invalid Value";
-      document.getElementById("VwPxInput").value = '';       
+      document.getElementById("PxtoVW").placeholder = "Invalid Value";
+      document.getElementById("PxtoVW").value = '';       
     // If the Number to convert in Vh is Nan of empty then this one is executed    
     }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
-      document.getElementById("VhPxInput").placeholder = "Invalid Value";  
-      document.getElementById("VhPxInput").value = '';
+      document.getElementById("PxtoVh").placeholder = "Invalid Value";  
+      document.getElementById("PxtoVh").value = '';
 
     }
    
