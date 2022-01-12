@@ -226,15 +226,18 @@ function Choice(){
       document.getElementById("PxtoVwResult").innerHTML = `${PxtoVw}px is the ${VwPxInput} units of ${DeviceWidth}`;
       document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;  
       // If both the values are Nan then this one is executed
-    }else if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
+    }else if(VwPxInputNaN == 'NaN' && VhPxInputNaN == 'NaN'){
       document.getElementById('MistakeDisplay').innerHTML = "Enter a Valid value";  
-      document.getElementById("VwPxInput").placeholder = "Invalid Value";
-      document.getElementById("VwPxInput").value = '';   
-      document.getElementById("VhPxInput").placeholder = "Invalid Value";    
-      document.getElementById("VwPxInput").value = '';   
-      document.getElementById("VhPxInput").value = ''; 
+      document.getElementById("PxtoVW").value = '';  
+      document.getElementById("PxtoVW").placeholder = "Invalid Value";
+      document.getElementById("PxtoVh").value = ''; 
+      document.getElementById("PxtoVh").placeholder = "Invalid Value";    
+     
    // If the Number to convert in Vw is Nan of empty then this one is executed   
-   }else if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
+   }
+   
+   
+   if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
       document.getElementById("VwPxInput").placeholder = "Invalid Value";
       document.getElementById("VwPxInput").value = '';       
     // If the Number to convert in Vh is Nan of empty then this one is executed    
