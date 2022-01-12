@@ -28,20 +28,22 @@
             <div id="displayresult">
                 <h5 id="HeaderDisplay">Enter the Value</h5>
                 <p id="MistakeDisplay">Enter a width and height you want to convert for 🔮</p>
-            </div>  
+            </div> 
+            <div class="Pxconversion">
             <label for="ScreenWidth">Screen Width</label>
-            <input type="text" name="ScreenWidth" id="ScreenWidth" placeholder="Enter the Width">
+            <input type="text" class="Maininput" name="ScreenWidth" id="ScreenWidth" placeholder="Enter the Width">
             <label for="ScreenHeight">Screen Height</label>
-            <input type="text" name="ScreenHeight" id="ScreenHeight" placeholder="Enter the height">
+            <input type="text" class="Maininput" name="ScreenHeight" id="ScreenHeight" placeholder="Enter the height">
             <label for="PxtoVw" >Number of Vw units</label>
             <input type="text" name="PxtoVw" id="PxtoVW" placeholder="Enter the Value">
-            <p id="PxtoVwResult"></p>
+            <code id="PxtoVwResult"></code>
             <label for="PxtoVh" >Number of Vh Units</label>
             <input type="text" name="PxtoVh" id="PxtoVh" placeholder="Enter the Value">
-            <p id="PxtoVhResult"></p>
+            <code id="PxtoVhResult"></code>
             <button class="DeviceButton" onclick="Calculate()">Check</button>
             <button class="DeviceButton" onclick="Clear()">Clear</button>
           </div>
+        </div>
         </div>
            <div class="ScreenSelector">
                <div id="knowScreensize">
