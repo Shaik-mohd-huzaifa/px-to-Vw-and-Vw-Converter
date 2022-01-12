@@ -43,13 +43,28 @@ console.log(window.innerWidth);
 // This clears the input and output 
 
 function Clear(){ 
+ /* document.getElementById("ScreenWidth").value = "";
+  document.getElementById("ScreenHeight").value = "";
+  document.getElementById("PxtoVwResult").innerHTML = "";
+  document.getElementById("PxtoVhResult").innerHTML = "";
+  document.getElementById("PxtoVW").value = '';
+  document.getElementById("PxtoVh").value = '';
+*/
+DeviceSelect = document.getElementById("select").value;
+  if(DeviceSelect == 'Iphone'){  
+  // Only clears the Px converted value and the convert and to convert input
+  document.getElementById("PxtoVwResult").innerHTML = "";
+  document.getElementById("PxtoVW").value = '';
+  document.getElementById("PxtoVhResult").innerHTML = "";
+  document.getElementById("PxtoVh").value = '';
+}else{
   document.getElementById("ScreenWidth").value = "";
   document.getElementById("ScreenHeight").value = "";
   document.getElementById("PxtoVwResult").innerHTML = "";
   document.getElementById("PxtoVhResult").innerHTML = "";
   document.getElementById("PxtoVW").value = '';
   document.getElementById("PxtoVh").value = '';
-
+}
 }
 /*
 function Clearinfo(){
@@ -71,7 +86,7 @@ let DeviceSelect;
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function Choice(){
-  let DeviceSelect = document.getElementById("select").value;
+  DeviceSelect = document.getElementById("select").value;
     if(DeviceSelect == 'Iphone'){// for Iphone {
       // It changes the empty input to iphone max viewport size
        DeviceWidth = document.getElementById("ScreenWidth").value = 390;
