@@ -2,6 +2,9 @@
 // This clears the input and output 
 
 function Clear(){ 
+  document.getElementById("PxtoVW").style.margin = "10px auto 30px auto";
+  document.getElementById("PxtoVh").style.margin = "10px auto 30px auto";
+
    DeviceSelect = document.getElementById("select").value;
      if(DeviceSelect == 'Custom'){  
      // If the selected option is Custom only then this clears everthing
@@ -154,7 +157,12 @@ function Calculate(){
   // because the input is in string so we need to first convert it to number to convert to px
   let WidthToCalculate = Number(document.getElementById("ScreenWidth").value);
   let HeightToCalculate = Number(document.getElementById("ScreenHeight").value);
-    
+  
+  // here the last 2 input bottom margin will be reduced because it has <p> after calculating
+  
+  document.getElementById("PxtoVW").style.margin = "10px auto 10px auto";
+  document.getElementById("PxtoVh").style.margin = "10px auto 10px auto";
+
   //document.getElementById("hes").innerHTML = WidthToCalculate;
   
   /* The reason to do this if the value enter is Not a number it must give out a statement with indicates 
