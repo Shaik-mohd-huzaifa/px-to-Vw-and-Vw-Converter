@@ -125,33 +125,19 @@ function Choice(){
        document.getElementById("PxtoVW").placeholder = "Enter the Value";
        document.getElementById("PxtoVh").placeholder = "Enter the Value";
      }else if(DeviceSelect == "Custom"){ 
-       if(DeviceWidth > 0 && DeviceHeight > 0){
-
-       // Clearing the value if any value is present in the input
-        DeviceWidth = document.getElementById("ScreenWidth").value = '';
-        DeviceHeight = document.getElementById("ScreenHeight").value = '';
-        
-       // If any value filled it clears when selected custom
-        document.getElementById("ScreenWidth").value = '';
-        document.getElementById("ScreenHeight").value = '';
-        
-       // turned off the disabled placeholder while choosen custom 
-        document.getElementById("ScreenWidth").disabled = false;
-        document.getElementById("ScreenHeight").disabled = false;
-        if(VwPxInput > 0 && VhPxInput > 0){
-          PxtoVw = WidthToCalculate * VwPxInput / 100;
-          PxtoVh = HeightToCalculate * VhPxInput / 100;
-          
-          document.getElementById("PxtoVwResult").innerHTML = `${PxtoVw}px is the ${VwPxInput} units of ${DeviceWidth}`;
-          document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;   
-        }else if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
-          document.getElementById("PxtoVwResult").innerHTML = "Invalid Value";
-          document.getElementById("VwPxInput").value = '';        
-        }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
-          document.getElementById("PxtoVhResult").innerHTML = "Invalid Value";  
-          document.getElementById("VhPxInput").value = '';        
-        }
+       if(ScreenWidth > 0 && ScreenHeight > 0){
+         // If any value filled it clears when selected custom
+         document.getElementById("ScreenWidth").value = '';
+         document.getElementById("ScreenHeight").value = '';
+         
+        // turned off the disabled placeholder while choosen custom  
+         document.getElementById("ScreenWidth").disabled = false;
+         document.getElementById("ScreenHeight").disabled = false;
        }
+       // Clearing the value if any value is present in the input
+        DeviceWidth = document.getElementById("ScreenWidth").value;
+        DeviceHeight = document.getElementById("ScreenHeight").value;
+        
        // Heading if the custom value is selected
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
        document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
@@ -166,6 +152,8 @@ function Choice(){
     }
   }
 
+  console.log(DeviceWidth);
+
   // This function finds out the vw and vh value of the px input 
   function Calculate(){  
       
@@ -179,11 +167,12 @@ function Choice(){
      first to string and then Compared */
      let WidthToCalculateNaN = WidthToCalculate + "";
      let HeightToCalculateNaN = HeightToCalculate + ""; 
-     document.getElementById("PxtoVwResult").innerHTML = "Enter a Postive Value";
-     document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";  
+    // document.getElementById("PxtoVwResult").innerHTML = "Enter a Postive Value";
+    // document.getElementById("PxtoVhResult").innerHTML = "Enter a Postive Value";  
      console.log(typeof WidthToCalculate); // First
      console.log(typeof HeightToCalculate);
-     
+    
+     // If both the values are stings this one is executed
    if(WidthToCalculate == 'Nan' && HeightToCalculate == 'Nan'){
       document.getElementById('MistakeDisplay').innerHTML = "Invalid Value Entered";
       document.getElementById('ScreenWidth').placeholder = "Invalid Value";
@@ -194,7 +183,7 @@ function Choice(){
       document.getElementById("ScreenWidth").value = "";
       document.getElementById("ScreenWidth").placeholder = "Invalid Value";
 
-   // This one Works when the Custom Screen Width is not a number or string     
+   // This one Works when the Custom Screen Height is not a number or string     
     }else if(HeightToCalculateNaN == 'NaN'){
       document.getElementById('MistakeDisplay').innerHTML = "Not a Number";
       document.getElementById("ScreenHeight").value = "";
@@ -230,25 +219,33 @@ function Choice(){
      let PxtoVh;
      
     // Here this logic converts the px Viewport to Vw and Vh units 
-   /* if(VwPxInput > 0 && VhPxInput > 0){
+    if(VwPxInput > 0 && VhPxInput > 0){
       PxtoVw = WidthToCalculate * VwPxInput / 100;
       PxtoVh = HeightToCalculate * VhPxInput / 100;
       
       document.getElementById("PxtoVwResult").innerHTML = `${PxtoVw}px is the ${VwPxInput} units of ${DeviceWidth}`;
-      document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;   
-    }else if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
-      document.getElementById("PxtoVwResult").innerHTML = "Invalid Value";
-      document.getElementById("VwPxInput").value = '';        
+      document.getElementById("PxtoVhResult").innerHTML = `${PxtoVh}px is the ${VhPxInput} units of ${DeviceHeight}`;  
+      // If both the values are Nan then this one is executed
+    }else if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
+      document.getElementById('MistakeDisplay').innerHTML = "Enter a Valid value";  
+      document.getElementById("VwPxInput").placeholder = "Invalid Value";
+      document.getElementById("VwPxInput").value = '';   
+      document.getElementById("VhPxInput").placeholder = "Invalid Value";    
+      document.getElementById("VwPxInput").value = '';   
+      document.getElementById("VhPxInput").value = ''; 
+   // If the Number to convert in Vw is Nan of empty then this one is executed   
+   }else if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
+      document.getElementById("VwPxInput").placeholder = "Invalid Value";
+      document.getElementById("VwPxInput").value = '';       
+    // If the Number to convert in Vh is Nan of empty then this one is executed    
     }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
-      document.getElementById("PxtoVhResult").innerHTML = "Invalid Value";  
-      document.getElementById("VhPxInput").value = '';        
-    }*/
+      document.getElementById("VhPxInput").placeholder = "Invalid Value";  
+      document.getElementById("VhPxInput").value = '';
+
+    }
    
    /// This Displayes in the bigger text "H4" this is universal Problems
-   // 1. If the value is not entered 
-    if(VwPxInputNaN == 'NaN' || VhPxInputNaN == 'NaN'){
-      document.getElementById('MistakeDisplay').innerHTML = "Enter a Valid value";      
-   }else if(VwPxInput == 0 && VhPxInput == 0){
+   else if(VwPxInput == 0 && VhPxInput == 0){
         document.getElementById('MistakeDisplay').innerHTML = "Enter the Vw and Vh units";
     }else if(VwPxInput == ''){
       document.getElementById('MistakeDisplay').innerHTML = "Enter the Vw units";
