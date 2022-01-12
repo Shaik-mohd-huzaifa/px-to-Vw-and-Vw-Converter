@@ -262,6 +262,10 @@ code {
   color: white;
   border-radius: 4px;
 }
+/* Here the top selection is hidden*/
+.topselectionsection {
+  display: none;
+}
 
 @media screen and (max-width: 550px) {
   .top-head > h1 {
@@ -306,5 +310,42 @@ code {
 
   .outerlayer {
     display: block;
+  }
+  .topselectionsection {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+  .topselectionsection #select {
+    width: auto;
+    margin: 0%;
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: black;
+    padding: 5px 10px;
+    height: auto;
+  }
+  .topselectionsection #select option {
+    background-color: darkorange;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    padding: 5px;
+  }
+  .topselectionsection .Topchoice {
+    width: 45px;
+    font-size: 15px;
+    font-family: poppins;
+    font-weight: 500;
+    background-color: darkorange;
+    height: 45px;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+    border-radius: 50%;
   }
 }
