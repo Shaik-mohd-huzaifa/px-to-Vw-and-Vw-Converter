@@ -124,16 +124,11 @@ function Choice(){
        document.getElementById("Screenheightinfo").innerHTML = "";
        document.getElementById("PxtoVW").placeholder = "Enter the Value";
        document.getElementById("PxtoVh").placeholder = "Enter the Value";
-     }else if(DeviceSelect == "Custom"){ 
-       if(ScreenWidth > 0 && ScreenHeight > 0){
-         // If any value filled it clears when selected custom
-         document.getElementById("ScreenWidth").value = '';
-         document.getElementById("ScreenHeight").value = '';
+     }else if(DeviceSelect == "Custom"){
          
         // turned off the disabled placeholder while choosen custom  
          document.getElementById("ScreenWidth").disabled = false;
          document.getElementById("ScreenHeight").disabled = false;
-       // Clearing the value if any value is present in the input
         DeviceWidth = document.getElementById("ScreenWidth").value;
         DeviceHeight = document.getElementById("ScreenHeight").value;
         
@@ -141,16 +136,17 @@ function Choice(){
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
        document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
 
-       // Asks for the input from the user if the custom height
+       // Asks for the input from the user if the custom height and Width
        document.getElementById("ScreenWidth").placeholder = "Enter the Width";
        document.getElementById("ScreenHeight").placeholder = "Enter the Height";
       
       // Storing the value entered by the user 
        DeviceWidth = document.getElementById("ScreenWidth").value;
        DeviceHeight = document.getElementById("ScreenHeight").value;
+
     }
-  }
 }
+
 
   console.log(DeviceWidth);
 
