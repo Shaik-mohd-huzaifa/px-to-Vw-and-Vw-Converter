@@ -155,6 +155,11 @@ input::placeholder {
   font-family: poppins;
 }
 
+code {
+  margin: 10px auto;
+  display: block;
+  margin-bottom: 15px;
+}
 .ScreenSizeChecker {
   display: flex;
   font-family: poppins;
