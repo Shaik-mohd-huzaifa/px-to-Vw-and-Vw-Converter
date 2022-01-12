@@ -125,10 +125,11 @@ input::placeholder {
   font-weight: 600;
 }
 .MainConversion button {
-  width: 13.5vw;
+  width: 11vw;
   font-family: poppins;
   font-size: 18px;
   padding: 5px 10px;
+  margin: auto 2%;
   background-color: #000;
   border: 0px;
   color: white;
