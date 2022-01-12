@@ -43,30 +43,24 @@ console.log(window.innerWidth);
 // This clears the input and output 
 
 function Clear(){ 
- /* document.getElementById("ScreenWidth").value = "";
-  document.getElementById("ScreenHeight").value = "";
-  document.getElementById("PxtoVwResult").innerHTML = "";
-  document.getElementById("PxtoVhResult").innerHTML = "";
-  document.getElementById("PxtoVW").value = '';
-  document.getElementById("PxtoVh").value = '';
-*/
-DeviceSelect = document.getElementById("select").value;
-  if(DeviceSelect == 'Iphone'){  
-  // Only clears the Px converted value and the convert and to convert input
-  document.getElementById("PxtoVwResult").innerHTML = "";
-  document.getElementById("PxtoVW").value = '';
-  document.getElementById("PxtoVhResult").innerHTML = "";
-  document.getElementById("PxtoVh").value = '';
-}else{
-  document.getElementById("ScreenWidth").value = "";
-  document.getElementById("ScreenHeight").value = "";
-  document.getElementById("PxtoVwResult").innerHTML = "";
-  document.getElementById("PxtoVhResult").innerHTML = "";
-  document.getElementById("PxtoVW").value = '';
-  document.getElementById("PxtoVh").value = '';
-  document.getElementById("PxtoVW").placeholder = "Enter a Value";
-  document.getElementById("PxtoVh").placeholder = "Enter a Value";
-}
+   DeviceSelect = document.getElementById("select").value;
+     if(DeviceSelect == 'Custom'){  
+     // If the selected option is Custom only then this clears everthing
+     document.getElementById("ScreenWidth").value = "";
+     document.getElementById("ScreenHeight").value = "";
+     document.getElementById("PxtoVwResult").innerHTML = "";
+     document.getElementById("PxtoVhResult").innerHTML = "";
+     document.getElementById("PxtoVW").value = '';
+     document.getElementById("PxtoVh").value = '';
+     document.getElementById("PxtoVW").placeholder = "Enter a Value";
+     document.getElementById("PxtoVh").placeholder = "Enter a Value";
+     }else{
+  // Only clears the Px converted value and the convert and to convert input, because expect the option "Custom" all other values options are set with default values
+     document.getElementById("PxtoVwResult").innerHTML = "";
+     document.getElementById("PxtoVW").value = '';
+     document.getElementById("PxtoVhResult").innerHTML = "";
+     document.getElementById("PxtoVh").value = '';
+    }
 }
 /*
 function Clearinfo(){
@@ -104,6 +98,10 @@ function Choice(){
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Iphone's Screen Sizes🍎`;
      document.getElementById("PxtoVW").value = " ";
      document.getElementById("PxtoVh").value = " ";
+
+     // This clears the results or any error below the to convert input
+     document.getElementById("PxtoVwResult").innerHTML = "";
+     document.getElementById("PxtoVhresult").innerHTML = "";
     }else if(DeviceSelect == "Android"){
              // Viewport size of android device max size 
       DeviceWidth = document.getElementById("ScreenWidth").value = 400;
@@ -117,6 +115,10 @@ function Choice(){
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;    
      document.getElementById("PxtoVW").value = " ";
      document.getElementById("PxtoVh").value = " "; 
+
+     // This clears the results or any error below the to convert input
+     document.getElementById("PxtoVwResult").innerHTML = "";
+     document.getElementById("PxtoVhresult").innerHTML = "";
     }
     else if(DeviceSelect == "Tablet"){
       DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
@@ -130,6 +132,10 @@ function Choice(){
       document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
       document.getElementById("PxtoVW").value = " ";
       document.getElementById("PxtoVh").value = " ";
+
+      // This clears the results or any error below the to convert input
+      document.getElementById("PxtoVwResult").innerHTML = "";
+      document.getElementById("PxtoVhresult").innerHTML = "";
      }else if(DeviceSelect == "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
@@ -140,7 +146,11 @@ function Choice(){
        document.getElementById("ScreenHeight").value = innerHeight;
        document.getElementById("MistakeDisplay").innerHTML = "This is the width and height of your current screen";
        document.getElementById("PxtoVW").value = " ";
-       document.getElementById("PxtoVh").value = " ";  
+       document.getElementById("PxtoVh").value = " ";
+
+       // This clears the results or any error below the to convert input
+       document.getElementById("PxtoVwResult").innerHTML = "";
+       document.getElementById("PxtoVhresult").innerHTML = "";  
        
      }else if(DeviceSelect == "Custom"){
          
@@ -157,13 +167,16 @@ function Choice(){
        document.getElementById("ScreenHeight").placeholder = "Enter the Height";
 
        document.getElementById("PxtoVW").value = " ";
-       document.getElementById("PxtoVh").value = " ";  
+       document.getElementById("PxtoVh").value = " "; 
+       
+       // This clears the results or any error below the to convert input
+       document.getElementById("PxtoVwResult").innerHTML = "";
+       document.getElementById("PxtoVhresult").innerHTML = "";
 
     }
 }
 
 
-  console.log(DeviceWidth);
 
   // This function finds out the vw and vh value of the px input 
   function Calculate(){  
@@ -202,9 +215,9 @@ function Choice(){
    
    // If the input value is empty then this one is worked   
     }else if(WidthToCalculate == '' && HeightToCalculate == ''){
-        document.getElementById('MistakeDisplay').innerHTML = "Give the Input";
-        document.getElementById('ScreenWidth').value = "Enter the Value";
-        document.getElementById('ScreenHeight').value = "Enter the Value";
+        document.getElementById('MistakeDisplay').innerHTML = "Give the Input to Convert";
+        document.getElementById('ScreenWidth').placeholder = "Enter the Value";
+        document.getElementById('ScreenHeight').placeholder = "Enter the Value";
     }
     
    // If the input value is empty then this one works
@@ -213,10 +226,11 @@ function Choice(){
      document.getElementById('ScreenWidth').placeholder = "Enter the Value";
 
     }else if(HeightToCalculate == ''){
-      document.getElementById('MistakeDisplay').placeholder = "Enter the height";
+      document.getElementById('MistakeDisplay').innerHTML = "Enter the height";
       document.getElementById('ScreenHeight').placeholder = "Enter the Value";
     }
-
+    DeviceWidth = document.getElementById("ScreenWidth").value;
+    DeviceHeight = document.getElementById("ScreenHeight").value;
     // Here the Number entered in String form is converted to Number
     let VwPxInput = Number(document.getElementById("PxtoVW").value);
     let VhPxInput = Number(document.getElementById("PxtoVh").value);
@@ -224,7 +238,7 @@ function Choice(){
     // Here this cocersion takes place and it converts the NaN to String "NaN" 
      let VwPxInputNaN = VwPxInput + "";
      let VhPxInputNaN = VhPxInput + "";
-   
+    
     // Declaring here to be used globally  
      let PxtoVw;
      let PxtoVh;
@@ -259,7 +273,6 @@ function Choice(){
     }else if(VhPxInput <= 0 || VhPxInputNaN == 'NaN'){
       document.getElementById("PxtoVh").placeholder = "Invalid Value";  
       document.getElementById("PxtoVh").value = '';
-
     }
    
    /// This Displayes in the bigger text "H4" this is universal Problems
@@ -271,7 +284,6 @@ function Choice(){
       document.getElementById('MistakeDisplay').innerHTML = "Enter the Vh units";
     }
   }
-
 /*
   function color1(){
     document.getElementById('select').style.backgroundColor = "blue";
