@@ -9,6 +9,9 @@ body {
   margin: 0px;
 }
 
+/*Styling the universal button*/
+button:hover {
+}
 .top-head > h1 {
   margin: auto;
   font-family: poppins;
@@ -173,6 +176,20 @@ code {
   text-align: center;
 }
 
+.ScreenSizeCheckingbutton {
+  display: block;
+  margin: auto;
+  width: 11vw;
+  margin-top: 40px;
+  padding: 5px 10px;
+  font-size: 19px;
+  font-family: poppins;
+  font-weight: 500;
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  border: 0px;
+}
 #knowScreenHeight {
   width: 100%;
 }
