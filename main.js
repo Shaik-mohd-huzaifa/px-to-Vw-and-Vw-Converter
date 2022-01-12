@@ -64,6 +64,8 @@ DeviceSelect = document.getElementById("select").value;
   document.getElementById("PxtoVhResult").innerHTML = "";
   document.getElementById("PxtoVW").value = '';
   document.getElementById("PxtoVh").value = '';
+  document.getElementById("PxtoVW").placeholder = "Enter a Value";
+  document.getElementById("PxtoVh").placeholder = "Enter a Value";
 }
 }
 /*
@@ -87,6 +89,8 @@ let DeviceSelect;
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function Choice(){
   DeviceSelect = document.getElementById("select").value;
+  document.getElementById("PxtoVW").placeholder = 'Enter the Number';     
+
     if(DeviceSelect == 'Iphone'){// for Iphone {
       // It changes the empty input to iphone max viewport size
        DeviceWidth = document.getElementById("ScreenWidth").value = 390;
@@ -99,7 +103,7 @@ function Choice(){
      document.getElementById("HeaderDisplay").innerHTML = "Iphone"
      document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Iphone's Screen Sizes🍎`;
      document.getElementById("PxtoVW").value = " ";
-     document.getElementById("PxtoVh").value = " ";     
+     document.getElementById("PxtoVh").value = " ";
     }else if(DeviceSelect == "Android"){
              // Viewport size of android device max size 
       DeviceWidth = document.getElementById("ScreenWidth").value = 400;
@@ -241,7 +245,13 @@ function Choice(){
       document.getElementById("PxtoVh").placeholder = "Invalid Value";    
      
    // If the Number to convert in Vw is Nan of empty then this one is executed   
+   }else if(VwPxInputNaN <= 0 && VhPxInputNaN <= 0){
+    document.getElementById("PxtoVW").placeholder = "Invalid Value";
+    document.getElementById("PxtoVW").value = '';       
+    document.getElementById("PxtoVh").placeholder = "Invalid Value";  
+    document.getElementById("PxtoVh").value = '';
    }
+
    if(VwPxInput <= 0 || VwPxInputNaN == 'NaN'){
       document.getElementById("PxtoVW").placeholder = "Invalid Value";
       document.getElementById("PxtoVW").value = '';       
