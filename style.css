@@ -308,9 +308,6 @@ code {
     border-radius: 50%;
   }
 
-  .outerlayer {
-    display: block;
-  }
   .topselectionsection {
     display: flex;
     width: 100%;
@@ -318,7 +315,7 @@ code {
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
-    column-gap: 10px;
+    column-gap: 20px;
   }
   .topselectionsection #select {
     width: auto;
@@ -348,4 +345,29 @@ code {
     text-align: center;
     border-radius: 50%;
   }
+
+  .outerlayer {
+    padding: 0px;
+    display: block;
+  }
+  .converter {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .MainConversion {
+    padding-top: 15px;
+  }
+  .MainConversion #displayresult{
+    margin-bottom: 24px;
+    height: auto;
+  }
+
+  #displayresult #HeaderDisplay {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  #displayresult #MistakeDisplay{
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
