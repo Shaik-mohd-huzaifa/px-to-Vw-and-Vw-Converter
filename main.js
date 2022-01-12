@@ -33,11 +33,11 @@ let DeviceHeight;
 let DeviceSelect;
 
 
+
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function Choice(){
-  DeviceSelect = document.getElementById("select").value;
-  document.getElementById("PxtoVW").placeholder = 'Enter the Number';     
+  DeviceSelect = document.getElementById("select").value;     
 
     if(DeviceSelect == 'Iphone'){// for Iphone {
       // It changes the empty input to iphone max viewport size
