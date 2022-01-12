@@ -1,4 +1,13 @@
-
+// This function checks the height and width and displays to the user
+function checksize(){
+  let knowScreenWidth = window.innerWidth;
+  let knowScreenHeight = window.innerHeight;
+  
+  // It displays the screen size to the client
+  document.getElementById("knowScreenWidth").innerHTML = ("Width: " + knowScreenWidth + "px");
+  document.getElementById("knowscreenHeight").innerHTML = ("Height: " + knowScreenHeight + "px");
+ 
+}
 // This clears the input and output 
 
 function Clear(){ 
