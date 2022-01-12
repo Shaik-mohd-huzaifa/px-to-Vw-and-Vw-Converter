@@ -357,7 +357,7 @@ code {
   .MainConversion {
     padding-top: 15px;
   }
-  .MainConversion #displayresult{
+  .MainConversion #displayresult {
     margin-bottom: 24px;
     height: auto;
   }
@@ -367,7 +367,12 @@ code {
     margin-bottom: 5px;
   }
 
-  #displayresult #MistakeDisplay{
+  #displayresult #MistakeDisplay {
     margin-top: 5px;
     margin-bottom: 10px;
+  }
+
+  .converter .MainConversion input {
+    width: 200px;
+  }
 }
