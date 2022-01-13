@@ -404,14 +404,9 @@ code {
   .converter .MainConversion label {
     font-size: 15px;
     font-family: montserrat;
-    font-weight: 600;
+    font-weight: 700;
   }
   button:hover {
     transform: none;
-  }
-
-  .Pxconversion button:active {
-    color: none;
-    background-color: none;
   }
 }
