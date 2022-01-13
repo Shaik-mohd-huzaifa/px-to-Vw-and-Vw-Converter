@@ -172,8 +172,7 @@ function Calculate(){
   document.getElementById("PxtoVW").style.margin = "10px auto 10px auto";
   document.getElementById("PxtoVh").style.margin = "10px auto 10px auto";
 
-  //document.getElementById("hes").innerHTML = WidthToCalculate;
-  
+
   /* The reason to do this if the value enter is Not a number it must give out a statement with indicates 
   not a number. Because it is not comparing in a directly (WidhtTocalculate = NaN or toNan) its not working
   no if the input is string and after convert it shows a NaN but the type of Nan is Number it has to be converted
