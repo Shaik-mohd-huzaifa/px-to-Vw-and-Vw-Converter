@@ -1,6 +1,8 @@
 body {
   box-sizing: border-box;
   margin: 0px;
+  background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .top-head {
@@ -74,11 +76,13 @@ button:active {
 .outerlayer {
   padding: 10px;
   display: flex;
+  padding-top: 0px;
 }
 
 .converter {
   width: 50%;
   padding: 10px;
+  padding-top: 0px;
 }
 
 .MainConversion {
@@ -153,18 +157,12 @@ input::placeholder {
   border-radius: 4px;
 }
 
-.MainConversion button:active {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  text-align: center;
-}
 .ScreenSelector {
   padding: 10px;
   width: 50%;
   text-align: center;
   display: block;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .ScreenSelector #knowScreensize {
@@ -204,13 +202,14 @@ code {
   display: block;
   margin: auto;
   width: 150px;
+  font-weight: 600;
   margin-top: 40px;
   padding: 5px 10px;
   font-size: 19px;
   font-family: montserrat;
-  font-weight: 500;
-  background-color: #000;
-  color: white;
+  font-weight: 600;
+  background-color: darkorange;
+  color: black;
   border-radius: 5px;
   border: 0px;
 }
@@ -230,7 +229,7 @@ code {
   text-align: center;
   display: block;
   font-size: 3vw;
-  font-weight: 600;
+  font-weight: 700;
   font-family: montserrat;
   margin-bottom: 40px;
 }
@@ -241,7 +240,7 @@ code {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 200px;
-  font-family: poppins;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 20px;
   padding: 5px;
@@ -256,7 +255,7 @@ code {
   text-align: center;
   font-size: 15px;
   font-weight: 600;
-  color: white;
+  color: black;
   border: 0px;
 }
 
@@ -265,10 +264,11 @@ code {
   font-family: montserrat;
   font-size: 18px;
   padding: 5px 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: darkorange;
   border: 0px;
-  color: white;
+  color: black;
   border-radius: 4px;
+  font-weight: 600;
 }
 /* Here the top selection is hidden*/
 .topselectionsection {
