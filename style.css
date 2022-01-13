@@ -409,4 +409,8 @@ code {
   button:hover {
     transform: none;
   }
+
+  .ScreenSelector {
+    display: none;
+  }
 }
