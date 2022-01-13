@@ -9,6 +9,9 @@ body {
   margin: 0px;
 }
 
+input:active {
+  border: 0px;
+}
 /* universal button styling*/
 button {
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -383,10 +386,6 @@ code {
     margin-bottom: 20px;
   }
 
-  .converter .MainConversion .Pxconversion input:nth-child(9) {
-    margin-bottom: 100px;
-  }
-
   .DeviceSelectionHeader {
     display: block;
     margin: 20px auto 10px;
@@ -394,5 +393,10 @@ code {
     font-size: 20px;
     font-family: Poppins;
     font-weight: 600;
+  }
+
+  .Pxconversion button {
+    margin-top: 20px;
+    width: 100px;
   }
 }
