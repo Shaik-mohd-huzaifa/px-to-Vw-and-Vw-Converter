@@ -396,12 +396,22 @@ code {
   }
 
   .Pxconversion button {
-    margin-top: 10px;
-    width: 100px;
+    margin: 10px 5px;
+    width: 150px;
     font-size: 15px;
   }
 
+  .converter .MainConversion label {
+    font-size: 15px;
+    font-family: montserrat;
+    font-weight: 600;
+  }
   button:hover {
     transform: none;
+  }
+
+  .Pxconversion button:active {
+    color: none;
+    background-color: none;
   }
 }
