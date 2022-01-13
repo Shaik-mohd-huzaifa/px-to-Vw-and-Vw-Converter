@@ -359,7 +359,7 @@ code {
     box-sizing: border-box;
   }
   .MainConversion {
-    padding-top: 15px;
+    padding-top: 0px;
   }
   .MainConversion #displayresult {
     margin-bottom: 24px;
@@ -368,18 +368,23 @@ code {
 
   #displayresult #HeaderDisplay {
     font-size: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   #displayresult #MistakeDisplay {
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 3vw;
     font-family: poppins;
   }
 
   .converter .MainConversion input {
     width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .converter .MainConversion .Pxconversion input:nth-child(9) {
+    margin-bottom: 100px;
   }
 
   .DeviceSelectionHeader {
