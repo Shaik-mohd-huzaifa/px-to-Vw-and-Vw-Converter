@@ -163,7 +163,7 @@ input::placeholder {
   width: 50%;
   text-align: center;
   display: block;
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .ScreenSelector #knowScreensize {
@@ -171,7 +171,7 @@ input::placeholder {
 }
 
 .ScreenSelector #knowScreensize h5 {
-  font-size: 40px;
+  font-size: 3vw;
   margin: 0px;
   margin-top: 10px;
   font-family: poppins;
@@ -184,10 +184,11 @@ code {
 }
 .ScreenSizeChecker {
   display: flex;
-  font-family: poppins;
-  font-weight: 500;
+  font-family: montserrat;
+  font-weight: 600;
   width: 100%;
   text-align: center;
+  margin-top: 20px;
 }
 
 .ScreenSizeChecker #knowScreenWidth {
@@ -198,7 +199,7 @@ code {
 .ScreenSizeCheckingbutton {
   display: block;
   margin: auto;
-  width: 11vw;
+  width: 150px;
   margin-top: 40px;
   padding: 5px 10px;
   font-size: 19px;
@@ -217,13 +218,13 @@ code {
   padding: 10px;
   display: block;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 
 #ScreenSelection label {
   text-align: center;
   display: block;
-  font-size: 35px;
+  font-size: 3vw;
   font-weight: 600;
   font-family: poppins;
 }
@@ -240,7 +241,7 @@ code {
   padding: 5px;
   border-radius: 5px;
   border: 0px;
-  background-color: #b21f1f;
+  background-color: #000;
   color: white;
 }
 
@@ -257,7 +258,7 @@ code {
   font-family: poppins;
   font-size: 18px;
   padding: 5px 10px;
-  background-color: rgb(0, 0, 61);
+  background-color: rgb(0, 0, 0);
   border: 0px;
   color: white;
   border-radius: 4px;
