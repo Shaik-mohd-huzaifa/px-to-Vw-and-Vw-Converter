@@ -278,21 +278,6 @@ code {
   display: none;
 }
 
-.mainflex {
-  width: 100%;
-  background-color: darkorange;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.miniflex {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-
 @media screen and (max-width: 550px) {
   .top-head > h1 {
     width: 45%;
