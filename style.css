@@ -267,6 +267,10 @@ code {
   display: none;
 }
 
+.DeviceSelectionHeader {
+  display: none;
+}
+
 @media screen and (max-width: 550px) {
   .top-head > h1 {
     width: 45%;
@@ -363,7 +367,7 @@ code {
   }
 
   #displayresult #HeaderDisplay {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 5px;
   }
 
@@ -376,5 +380,14 @@ code {
 
   .converter .MainConversion input {
     width: 200px;
+  }
+
+  .DeviceSelectionHeader {
+    display: block;
+    margin: 20px auto 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 600;
   }
 }
