@@ -141,7 +141,7 @@ input::placeholder {
   font-weight: 600;
 }
 .MainConversion button {
-  width: 11vw;
+  width: 150px;
   font-family: poppins;
   font-size: 18px;
   padding: 5px 10px;
@@ -227,6 +227,7 @@ code {
   font-size: 3vw;
   font-weight: 600;
   font-family: poppins;
+  margin-bottom: 40px;
 }
 
 #select {
