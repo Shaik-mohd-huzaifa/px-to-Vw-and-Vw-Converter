@@ -370,6 +370,8 @@ code {
   #displayresult #MistakeDisplay {
     margin-top: 5px;
     margin-bottom: 10px;
+    font-size: 3vw;
+    font-family: poppins;
   }
 
   .converter .MainConversion input {
