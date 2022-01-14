@@ -8,8 +8,9 @@ function checksize(){
   document.getElementById("knowscreenHeight").innerHTML = ("Height: " + knowScreenHeight + "px");
  
 }
-// This clears the input and output 
 
+
+// This clears the input and output 
 function Clear(){ 
   document.getElementById("PxtoVW").style.margin = "10px auto 30px auto";
   document.getElementById("PxtoVh").style.margin = "10px auto 30px auto";
@@ -44,6 +45,15 @@ let DeviceHeight;
 // Assigning the value or getting the value from user
 let DeviceSelect;
 
+// It clears if there is any input when the selection is custom
+function CustomClear(){
+  DeviceWidth = document.getElementById("ScreenWidth").value;
+  DeviceHeight = document.getElementById("ScreenHeight").value;  
+  if(DeviceWidth >= 0 || DeviceHeight >= 0){
+    document.getElementById("ScreenWidth").value = "";
+    document.getElementById("ScreenHeight").value = ""; 
+  }
+}
 
 
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
@@ -56,7 +66,7 @@ function Choice(){
        // It changes the empty input to iphone max viewport size
        DeviceWidth = document.getElementById("ScreenWidth").value = 390;
        DeviceHeight = document.getElementById("ScreenHeight").value = 844;
-       
+      
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
        
@@ -77,6 +87,7 @@ function Choice(){
        DeviceHeight = document.getElementById("ScreenHeight").value = 850;
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
+
        // It does not allow the user to change the value
        document.getElementById("ScreenWidth").disabled = true;
        document.getElementById("ScreenHeight").disabled = true;
@@ -93,6 +104,7 @@ function Choice(){
        DeviceHeight = document.getElementById("ScreenHeight").value = 1366;
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
+
        // It does not allow the user to change the value
        document.getElementById("ScreenWidth").disabled = true;
        document.getElementById("ScreenHeight").disabled = true;
@@ -114,6 +126,7 @@ function Choice(){
        document.getElementById("MistakeDisplay").innerHTML = "This is the width and height of your current screen";
        document.getElementById("PxtoVW").value = " ";
        document.getElementById("PxtoVh").value = " ";
+
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
        document.getElementById("PxtoVhResult").innerHTML = "";  
@@ -208,6 +221,7 @@ function Choicetwice(){
        document.getElementById("PxtoVhResult").innerHTML = "";  
        
      }else if(DeviceSelect === "Custom"){ 
+      CustomClear();
        // turned off the disabled placeholder while choosen custom  
        document.getElementById("ScreenWidth").disabled = false;
        document.getElementById("ScreenHeight").disabled = false;
@@ -224,16 +238,7 @@ function Choicetwice(){
        document.getElementById("PxtoVhResult").innerHTML = "";
     }
 }
-function makechoice(){
-  DeviceSelect = document.getElementById("select").value;     
-    
 
-  if(DeviceSelect === 'Iphone'){
-     // It changes the empty input to iphone max viewport size
-     DeviceWidth = document.getElementById("ScreenWidth").value = 390;
-     DeviceHeight = document.getElementById("ScreenHeight").value = 844;
-  }
-}
 
 // This function finds out the vw and vh value of the px input 
 function Calculate(){  
