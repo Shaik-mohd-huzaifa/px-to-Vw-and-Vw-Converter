@@ -13,6 +13,7 @@
     <title>Px to Vw converter</title>
 </head>
 <body>
+  <div class="navbar">
     <div class="top-head">
         <h1>Px to Vw and Vh converter</h1>
         <div class="Media-Queries">
@@ -22,9 +23,11 @@
              </ul>
         </div>
     </div>
+</div>
+    <div class="landingpage">
     <h2 class="DeviceSelectionHeader">Select the Device Size</h2>
     <div class="topselectionsection">
-    <select name="SelectDevice" onclick="color1()" id="select" class="Topselect">
+    <select name="SelectDevice" id="select" class="Topselect">
         <option value="Custom" >Custom</option>
         <option value="Yourdevice" >Your Device</option>
         <option value="Iphone" >Iphone</option>
@@ -43,14 +46,14 @@
             </div> 
             <div class="Pxconversion">
             <label for="ScreenWidth">Screen Width</label>
-            <input type="text" class="Maininput" name="ScreenWidth" maxlenght="10" id="ScreenWidth" placeholder="Enter the Width">
+            <input type="text" class="Maininput" name="ScreenWidth" id="ScreenWidth" placeholder="Enter the Width">
             <label for="ScreenHeight">Screen Height</label>
-            <input type="text" class="Maininput" name="ScreenHeight" maxlenght="10" id="ScreenHeight" placeholder="Enter the height">
+            <input type="text" class="Maininput" name="ScreenHeight" id="ScreenHeight" placeholder="Enter the height">
             <label for="PxtoVw" >Number of Vw units</label>
-            <input type="text" name="PxtoVw" id="PxtoVW" minlenght="10" placeholder="Enter the Value">
+            <input type="text" name="PxtoVw" id="PxtoVW" placeholder="Enter the Value">
             <code id="PxtoVwResult"></code>
             <label for="PxtoVh" >Number of Vh Units</label>
-            <input type="text" name="PxtoVh" id="PxtoVh" max-lenght="10" placeholder="Enter the Value">
+            <input type="text" name="PxtoVh" id="PxtoVh" placeholder="Enter the Value">
             <code id="PxtoVhResult"></code>
             <button class="DeviceButton" onclick="Calculate()">Check</button>
             <button class="DeviceButton" onclick="Clear()">Clear</button>
@@ -58,27 +61,28 @@
         </div>
         </div>
            <div class="ScreenSelector">
-                <div id="ScreenSelection">
-                   <label for="SelectDevice">Select the Device</label>
-                <select name="SelectDevice" onclick="color1()" id="select">
-                    <option value="Custom" >Custom</option>
-                    <option value="Yourdevice" >Your Device</option>
-                    <option value="Iphone" >Iphone</option>
-                    <option value="Android" >Android</option>
-                    <option value="Tablet" >Tablet</option>
-                </select>
-                <button type="submit" onclick="Choice()">Check</button>
-           </div>
-           <div id="knowScreensize">
-            <h5>Know your Current Screen Size</h5>
-            <div class="ScreenSizeChecker">
-            <p id="knowScreenWidth" class="Width" >Width: </p>
-            <p id="knowscreenHeight">Height: </p>
-         </div>
-         <button class="ScreenSizeCheckingbutton" onclick="checksize()">Check</button>
+            <div id="ScreenSelection">
+                <label for="SelectDevice">Select the Device</label>
+             <select name="SelectDevice" id="select">
+                 <option value="Custom" >Custom</option>
+                 <option value="Yourdevice" >Your Device</option>
+                 <option value="Iphone" >Iphone</option>
+                 <option value="Android" >Android</option>
+                 <option value="Tablet" >Tablet</option>
+             </select>
+             <button type="submit" onclick="Choice()">Check</button>
+        </div>
+            <div id="knowScreensize">
+                <h5>Know your Current Screen Size</h5>
+                <div class="ScreenSizeChecker">
+                <p id="knowScreenWidth" class="Width" >Width: </p>
+                <p id="knowscreenHeight">Height: </p>
+             </div>
+             <button class="ScreenSizeCheckingbutton" onclick="checksize()">Check</button>    
          </div>
            </div>
     </div>
+</div>
     
   </body>
   </html>
