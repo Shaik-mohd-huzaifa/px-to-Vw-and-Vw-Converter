@@ -14,7 +14,6 @@ body {
 /* universal button styling*/
 button {
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  text-align: center;
 }
 /*Styling the universal button*/
 button:hover {
@@ -67,6 +66,7 @@ button:active {
 .Media-Queries li:hover {
   transform: scale(1.04);
   color: #000;
+  text-align: center;
   background-color: white;
 }
 .Media-Queries > ul > li abbr[title] {
@@ -76,7 +76,9 @@ button:active {
 .outerlayer {
   padding: 10px;
   display: flex;
+  height: 100%;
   padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .converter {
@@ -121,7 +123,7 @@ button:active {
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
-  background-color: black;
+  background-color: darkorange;
 }
 
 .converter .MainConversion label {
@@ -133,11 +135,20 @@ button:active {
 
 input::placeholder {
   font-family: poppins;
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: normal;
 }
 
+.navbar {
+  height: 8vh;
+}
+.landingpage {
+  height: 92vh;
+  min-height: 92vh;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
 .MainConversion {
   font-family: poppins;
   margin: 3px;
@@ -167,7 +178,6 @@ input::placeholder {
 
 .ScreenSelector #knowScreensize {
   width: 100%;
-
   height: 50%;
   box-sizing: border-box;
 }
@@ -180,9 +190,12 @@ input::placeholder {
 }
 
 code {
-  margin: 10px auto;
+  margin: 10px 0px;
   display: block;
   margin-bottom: 15px;
+  background-color: darkorange;
+  border-radius: 4px;
+  width: auto;
 }
 .ScreenSizeChecker {
   display: flex;
@@ -223,6 +236,7 @@ code {
   text-align: center;
   padding-top: 0px;
   height: 50%;
+  box-sizing: border-box;
 }
 
 #ScreenSelection label {
