@@ -27,9 +27,9 @@ function Clear(){
      document.getElementById("PxtoVh").placeholder = "Enter a Value";
      }else{
   // Only clears the Px converted value and the convert and to convert input, because expect the option "Custom" all other values options are set with default values
-     document.getElementById("PxtoVwResult").innerHTML = "";
+     document.getElementById("PxtoVwResult").innerHTML = " ";
      document.getElementById("PxtoVW").value = '';
-     document.getElementById("PxtoVhResult").innerHTML = "";
+     document.getElementById("PxtoVhResult").innerHTML = " ";
      document.getElementById("PxtoVh").value = '';
     }
 }
@@ -49,11 +49,10 @@ let DeviceSelect;
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function Choice(){
-  DeviceSelect = document.getElementById("select").value;     
+  DeviceSelect = document.getElementById('select').value;  
     
-  
-  //
-    if(DeviceSelect == 'Iphone'){
+
+    if(DeviceSelect === 'Iphone'){
        // It changes the empty input to iphone max viewport size
        DeviceWidth = document.getElementById("ScreenWidth").value = 390;
        DeviceHeight = document.getElementById("ScreenHeight").value = 844;
@@ -71,39 +70,29 @@ function Choice(){
 
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
-       document.getElementById("PxtoVhresult").innerHTML = "";
-    }
-    else if(DeviceSelect == "Android"){
-      
+       document.getElementById("PxtoVhResult").innerHTML = "";
+    }else if(DeviceSelect === "Android"){
        // Viewport size of android device max size 
        DeviceWidth = document.getElementById("ScreenWidth").value = 400;
-       DeviceHeight = document.getElementById("ScreenHeight").value = 85
-      
+       DeviceHeight = document.getElementById("ScreenHeight").value = 850;
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
-      
        // It does not allow the user to change the value
        document.getElementById("ScreenWidth").disabled = true;
        document.getElementById("ScreenHeight").disabled = true;
        document.getElementById("HeaderDisplay").innerHTML = "Android";
        document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Android's Screen Sizes📱`;    
        document.getElementById("PxtoVW").value = " ";
-       document.getElementById("PxtoVh").value = " "; 
-
+       document.getElementById("PxtoVh").value = " ";
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
-       document.getElementById("PxtoVhresult").innerHTML = "";
-    }
-    // If selected option Tablet
-    else if(DeviceSelect == "Tablet"){
-      
+       document.getElementById("PxtoVhResult").innerHTML = "";
+    }else if(DeviceSelect === "Tablet"){
        // Maximum screen size of a tablet
        DeviceWidth = document.getElementById("ScreenWidth").value = 1024;
        DeviceHeight = document.getElementById("ScreenHeight").value = 1366;
-      
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = DeviceSelect;
-      
        // It does not allow the user to change the value
        document.getElementById("ScreenWidth").disabled = true;
        document.getElementById("ScreenHeight").disabled = true;
@@ -111,16 +100,13 @@ function Choice(){
        document.getElementById("MistakeDisplay").innerHTML = `You have Selected a Tablets screen sizes 🌠`;
        document.getElementById("PxtoVW").value = " ";
        document.getElementById("PxtoVh").value = " ";
-
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
-       document.getElementById("PxtoVhresult").innerHTML = "";
-     }
-     // If selected option Yourdevice
-     else if(DeviceSelect == "Yourdevice"){ 
+       document.getElementById("PxtoVhResult").innerHTML = "";
+    }else if(DeviceSelect === "Yourdevice"){ 
        // Here if the user select DeviceSelect option the function will fetch the screen width and displays it
        DeviceWidth = innerWidth;  // Here the device width and height is set to the
-       DeviceHeidth = innerHeight;// clients inital device
+       DeviceHeight = innerHeight;// clients inital device
        // It displays the selected device name of the header
        document.getElementById("HeaderDisplay").innerHTML = "Current screen";
        document.getElementById("ScreenWidth").value = innerWidth;
@@ -128,37 +114,38 @@ function Choice(){
        document.getElementById("MistakeDisplay").innerHTML = "This is the width and height of your current screen";
        document.getElementById("PxtoVW").value = " ";
        document.getElementById("PxtoVh").value = " ";
-
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
-       document.getElementById("PxtoVhresult").innerHTML = "";  
+       document.getElementById("PxtoVhResult").innerHTML = "";  
        
-     }
-     else if(DeviceSelect == "Custom"){
-         
+     }else if(DeviceSelect === "Custom"){ 
        // turned off the disabled placeholder while choosen custom  
        document.getElementById("ScreenWidth").disabled = false;
        document.getElementById("ScreenHeight").disabled = false;
-        
        // Heading if the custom value is selected
        document.getElementById("HeaderDisplay").innerHTML = "Enter the Custom values";
        document.getElementById("MistakeDisplay").innerHTML = "Enter a width and height you want to convert for 🔮";
-
        // Asks for the input from the user if the custom height and Width
        document.getElementById("ScreenWidth").placeholder = "Enter the Width";
        document.getElementById("ScreenHeight").placeholder = "Enter the Height";
-
        document.getElementById("PxtoVW").value = " ";
        document.getElementById("PxtoVh").value = " "; 
-       
        // This clears the results or any error below the to convert input
        document.getElementById("PxtoVwResult").innerHTML = "";
-       document.getElementById("PxtoVhresult").innerHTML = "";
-
+       document.getElementById("PxtoVhResult").innerHTML = "";
     }
 }
 
+function makechoice(){
+  DeviceSelect = document.getElementById("select").value;     
+    
 
+  if(DeviceSelect === 'Iphone'){
+     // It changes the empty input to iphone max viewport size
+     DeviceWidth = document.getElementById("ScreenWidth").value = 390;
+     DeviceHeight = document.getElementById("ScreenHeight").value = 844;
+  }
+}
 
 // This function finds out the vw and vh value of the px input 
 function Calculate(){  
