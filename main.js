@@ -46,12 +46,22 @@ let DeviceHeight;
 let DeviceSelect;
 
 
-
+// It clears if there is any input when the selection is custom
+function CustomClear(){
+  DeviceWidth = document.getElementById("ScreenWidth").value;
+  DeviceHeight = document.getElementById("ScreenHeight").value; 
+  if(DeviceSelect === "Custom"){
+  if(DeviceWidth >= 0 || DeviceHeight >= 0){
+    document.getElementById("ScreenWidth").value = "";
+    document.getElementById("ScreenHeight").value = ""; 
+  }
+  }
+}
 
 // This function gets the choice of the client from the select input if and gives the output according to the selected device viewport width size
 // if iphone the the first two input units will be filled with the predefined sized and they cannot be modified by the user
 function ChoiceOnce(){
-  DeviceSelect = document.getElementById('select').value;  
+  DeviceSelect = document.getElementById('Oneselect').value;  
     
 
     if(DeviceSelect === 'Iphone'){
@@ -124,6 +134,7 @@ function ChoiceOnce(){
        document.getElementById("PxtoVhResult").innerHTML = "";  
        
      }else if(DeviceSelect === "Custom"){ 
+      CustomClear();
        // turned off the disabled placeholder while choosen custom  
        document.getElementById("ScreenWidth").disabled = false;
        document.getElementById("ScreenHeight").disabled = false;
@@ -141,22 +152,11 @@ function ChoiceOnce(){
     }
 }
 
-// It clears if there is any input when the selection is custom
-function CustomClear(){
-  DeviceWidth = document.getElementById("ScreenWidth").value;
-  DeviceHeight = document.getElementById("ScreenHeight").value; 
-  if(DeviceSelect === "Custom"){
-  if(DeviceWidth >= 0 || DeviceHeight >= 0){
-    document.getElementById("ScreenWidth").value = "";
-    document.getElementById("ScreenHeight").value = ""; 
-  }
-  }
-}
 
 
 // this function will work in mmobile screen viewport
 function Choicetwice(){
-  DeviceSelect = document.getElementById('Oneselect').value;  
+  DeviceSelect = document.getElementById('select').value;  
     
 
     if(DeviceSelect === 'Iphone'){
