@@ -48,10 +48,12 @@ let DeviceSelect;
 // It clears if there is any input when the selection is custom
 function CustomClear(){
   DeviceWidth = document.getElementById("ScreenWidth").value;
-  DeviceHeight = document.getElementById("ScreenHeight").value;  
+  DeviceHeight = document.getElementById("ScreenHeight").value; 
+  if(DeviceSelect === "Custom"){
   if(DeviceWidth >= 0 || DeviceHeight >= 0){
     document.getElementById("ScreenWidth").value = "";
     document.getElementById("ScreenHeight").value = ""; 
+  }
   }
 }
 
