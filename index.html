@@ -10,6 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P2YNF9B1M0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P2YNF9B1M0');
+</script>
     <title>Px to Vw converter</title>
 </head>
 <body>
@@ -34,7 +43,7 @@
         <option value="Android" >Android</option>
         <option value="Tablet" >Tablet</option>
     </select>
-    <button type="submit" onclick="Choicetwice();" class="Topchoice">GO</button>
+    <button type="submit" onclick="ChoiceOnce()" class="Topchoice">GO</button>
     </div>
     <div class="outerlayer">
       <div class="converter">
@@ -63,14 +72,14 @@
            <div class="ScreenSelector">
             <div id="ScreenSelection">
                 <label for="SelectDevice">Select the Device</label>
-             <select name="SelectDevice" id="select">
-                 <option value="Custom" >Custom</option>
+             <select name="SelectDevice" id="Oneselect">
+                 <option value="Custom">Custom</option>
                  <option value="Yourdevice" >Your Device</option>
                  <option value="Iphone" >Iphone</option>
                  <option value="Android" >Android</option>
                  <option value="Tablet" >Tablet</option>
              </select>
-             <button type="submit" onclick="Choice()">Check</button>
+             <button type="submit" onclick="Choicetwice()">Check</button>
         </div>
             <div id="knowScreensize">
                 <h5>Know your Current Screen Size</h5>
